@@ -1,0 +1,41 @@
+% Acentuação
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[T1]{fontenc}
+
+% Configurando as margens
+\usepackage[top = 3cm, bottom = 2cm, left = 3cm, right = 2cm, includefoot]{geometry}
+% Indentação do parágrafo
+\setlength{\parindent}{2cm}
+% Espaçamento entre parágrafo e texto
+\setlength{\parskip}{1em}
+% Espaçamento entre linhas
+\renewcommand{\baselinestretch}{1.5}
+% Identar o primeiro parágrafo das seções
+\usepackage{indentfirst}
+% Para colocar texto entre $$ com \text{oi}
+\usepackage{amsmath}
+% Para usar listas com estilos específicos
+\usepackage{enumerate}
+% Para utilizar imagens
+\usepackage{graphicx}
+% Posicionamento de imagem
+\usepackage{float}
+% Para símbolo de permilagem com \textperthousand em modo texto
+\usepackage{textcomp}
+% Notação de conjuntos: $\mathbb{N, Z, Q, R, C}$ e para usar símbolos como >=
+\usepackage{amssymb}
+
+% Header e footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+% \uptau
+\usepackage{upgreek}
+
+% Para til abaixo de um símbolo
+\usepackage{undertilde}
