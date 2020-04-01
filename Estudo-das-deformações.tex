@@ -1,0 +1,290 @@
+\section{Estudos das deformações}
+	
+	\subsection{Considerações iniciais}
+	
+	% \boldsymbol{g} para deixar o símbolo em negrito
+	
+	\begin{itemize}
+		\item Configuração do sólido: posição ocupada pelos pontos em um determinado instante $t$;
+		\item Descrever a configuração deformada ($V$) a partir de uma configuração de referência ($V^r$);
+		\item Considerando um conjunto de pontos da Geometria Euclidiana ($E$), e seja, $(\utilde{\mathbf{e_1}},\;\utilde{\mathbf{e_2}},\;\utilde{\mathbf{e_3}})$ uma base do espaço vetorial da geometria clássica.
+	\end{itemize}
+	
+	Podemos definir $(0,\;\utilde{\mathbf{e_1}},\;\utilde{\mathbf{e_2}},\;\utilde{\mathbf{e_3}})$ como um sistema de referência:
+	
+	// Inserir imagem
+	
+	Os vetores dos pontos de referência ($\utilde{\mathbf{x^r}}$) e na configuração deformada ($\utilde{\mathbf{x}}$) em relação aos versores da base podem ser expressos na notação de Einstein:
+	
+	\[\utilde{\mathbf{x^r}}=\utilde{\mathbf{x^r}}-\utilde{\mathbf{0}}=\sum_{i=1}^3x^{ri}\utilde{\mathbf{e_i}}=x^{r1}\utilde{\mathbf{e_1}}+x^{r2}\utilde{\mathbf{e_2}}+x^{r3}\utilde{\mathbf{e_3}}\]
+	\[\utilde{\mathbf{x}}=\utilde{\mathbf{x}}-\utilde{\mathbf{0}}=\sum_{i=1}^3x^i\utilde{\mathbf{e_i}}=x^1\utilde{\mathbf{e_1}}+x^2\utilde{\mathbf{e_2}}+x^3\utilde{\mathbf{e_3}}\]
+	
+	Seja $\psi$ uma função que associa a posição de cada ponto na configuração $V^r$ a sua posição na configuração $V$. Tal aplicação é uma transformação de $V^r$ em $V$.
+	
+	\[x^1=\hat{x}^1(x^{r1},\;x^{r2},\;x^{r3})\]
+	\[x^2=\hat{x}^2(x^{r1},\;x^{r2},\;x^{r3})\]
+	\[x^3=\hat{x}^3(x^{r1},\;x^{r2},\;x^{r3})\]
+	
+	Aqui, o circunflexo denota \textit{em função de}, \textit{i.e.}, a coordenada $i$ da posição deformada está em função das coordenadas da posição de referência.
+	
+	Exemplo: Considere um sólido cuja seção no plano $\utilde{\mathbf{e_1}}$, $\utilde{\mathbf{e_2}}$ é dado por:
+	
+	//Inserir imagem
+	
+	Caracterize os seguintes campos de deslocamento:
+	
+	\begin{enumerate}[a)]
+		\item Translação de corpo rígido de intensidade $\Delta$ na direção de $\utilde{\mathbf{e_1}}$;
+		\item Rotação de corpo rígido em torno de $\utilde{\mathbf{e_3}}$ de intensidade $\varphi$.
+	\end{enumerate}
+	
+	Resolução:
+	
+	\begin{enumerate}[a)]
+		\item
+			\[
+			\utilde{\mathbf{u}}=
+				\begin{Bmatrix}
+				u_1 \\ u_2 \\ u_3
+				\end{Bmatrix}
+				=
+				\begin{Bmatrix}
+					\Delta \\ 0 \\ 0
+				\end{Bmatrix}
+			\]
+			\[\utilde{\mathbf{u}}=\utilde{\mathbf{x}}-\utilde{\mathbf{x^r}}
+			\implies
+			\utilde{\mathbf{x}}=
+			\begin{cases} x^1=x^{r1}+u_1=x^{r1}+\Delta \\ x^2=x^{r2}+u_2=x^{r2} \\ x^3=x^{r3}+u_3=x^{r3}
+			\end{cases}
+			\]
+		\item
+			//Inserir imagem
+			
+			A configuração de referência:
+			\[x^{r1}=r\cdot \cos\theta\]
+			\[x^{r2}=r\cdot\sin\theta\]
+			\[x^{r3}=0\;\text{(ou }x^{r3}\text{ para deixar genérico})\]
+			
+			A configuração deformada (a partir da imagem):
+			
+			\[u^1=r\cdot\cos(\varphi+\theta)-r\cdot\cos\theta\]
+			\[u^1=r\cdot\cos\varphi\cdot\cos\theta-r\cdot\sin\varphi\cdot\sin\theta-r\cdot\cos\theta\]
+			
+			\[u^2=r\cdot\sin(\varphi+\theta)-r\cdot\sin\theta\]
+			\[u^2=r\cdot\sin\varphi\cdot\cos\theta+r\cdot\sin\theta\cdot\cos\varphi-r\cdot\sin\theta\]
+			
+			Substituindo as coordenadas de referência nas coordenadas deformadas:
+			
+			\[u^1=x^{r1}\cdot\cos\varphi-x^{r2}\cdot\sin\varphi-x^{r1}\]
+			\[u^2=x^{r1}\cdot\sin\varphi+x^{r2}\cdot\cos\varphi-x^{r2}\]
+			\[u^3=0\]
+			
+			Como sabemos que $\utilde{\mathbf{x}}=\utilde{\mathbf{x^r}}+\utilde{\mathbf{u}}$, temos:
+			
+			\[
+				\begin{cases}
+					x^1=x^{r1}\cdot\cos\varphi-x^{r2}\cdot\sin\varphi \\ x^2=x^{r1}\cdot\sin\varphi+x^{r2}\cdot\cos\varphi \\ x^3=x^{r3}
+				\end{cases}
+			\]
+			
+			Podemos escrever também na forma matricial:
+			
+			\[
+				\begin{Bmatrix}
+					x^1 \\ x^2 \\ x^3
+				\end{Bmatrix}
+				=
+				\begin{bmatrix}
+				
+					\cos\varphi & -\sin\varphi & 0 \\
+					\sin\varphi & \cos\varphi & 0 \\
+					0 & 0 & 1
+				\end{bmatrix}
+				\begin{Bmatrix}
+					x^{r1} \\ x^{r2} \\ x^{r3}
+				\end{Bmatrix}							
+			\]
+	\end{enumerate}
+		
+	\subsection{Deformação Normal e por Cisalhamento}
+	
+	//Inserir imagem
+	
+	O assunto agora são fibras; como as fibras sofrem deformação. Seja $d\utilde{\mathbf{x}}^r$ o vetor infinitesimal que representa uma fibra a partir do ponto $\utilde{\mathbf{x^r}}$; $d\utilde{\mathbf{x}}$ o vetor infinitesimal da mesma fibra agora na configuração deformada, partindo do ponto $\utilde{\mathbf{x}}$.
+	Para que o vetor $d\utilde{\mathbf{x}}^r$ deforme e se transforme em $d\utilde{\mathbf{x}}$, deve ocorrer uma transformação que depende de $\utilde{\mathbf{x}}^r+d\utilde{\mathbf{x}}^r$, \textit{i.e.}, uma transformação $\utilde{\mathbf{u}}(\utilde{\mathbf{x}}^r+d\utilde{\mathbf{x}}^r)$.
+	
+	Algumas relações podem ser estabelecidas a partir da imagem acima, sendo:
+	\[\utilde{\mathbf{u}}(\utilde{\mathbf{x}}^r)=d\utilde{\mathbf{x}}^r+\utilde{\mathbf{u}}(\utilde{\mathbf{x}}^r+d\utilde{\mathbf{x}}^r)\]
+	
+	E a fibra na configuração deformada:	
+	\[d\utilde{\mathbf{x}}=d\utilde{\mathbf{x}}^r+\utilde{\mathbf{u}}(\utilde{\mathbf{x}}^r+d\utilde{\mathbf{x}}^r)-\utilde{\mathbf{u}}(\utilde{\mathbf{x}}^r)\]
+	
+	A equação acima na forma de componentes:
+	\[dx^i=dx^{ri}+u^i(x^{r1}+dx^{r1},\;x^{r2}+dx^{r2},\;x^{r3}+dx^{r3})-u^i(x^{r1},\;x^{r2},\;x^{r3})\]
+	
+	Lembrando de cálculo com múltiplas variáveis:
+	\[u^i(x^{r1}+dx^{r1},\;x^{r2}+dx^{r2},\;x^{r3}+dx^{r3})-u^i(x^{r1},\;x^{r2},\;x^{r3})=\frac{\partial u^i}{\partial x^{r1}}dx^{r1}+\frac{\partial u^i}{\partial x^{r2}}dx^{r2}+\frac{\partial u^i}{\partial x^{r3}}dx^{r3}\]
+	
+	Para $i=1,\;2$ e $3$. Essa iteração diz que cada coordenada $i$ depende de acontecimentos nas $3$ dimensões do espaço euclidiano.
+	
+	Reescrevendo na forma matricial:
+	\[
+	\underbrace{
+		\begin{Bmatrix}
+			dx^1 \\ dx^2 \\ dx^3
+		\end{Bmatrix}
+		}_{\displaystyle d\utilde{\mathbf{x}}}
+		=
+		\underbrace{
+		\begin{Bmatrix}
+			dx^{r1} \\ dx^{r2} \\ dx^{r3}
+		\end{Bmatrix}
+		}_{\displaystyle d\utilde{\mathbf{x}}^r}
+		+
+		\underbrace{
+		\begin{bmatrix}
+			\frac{\partial u^1}{\partial x^{r1}} & \frac{\partial u^1}{\partial x^{r2}} & \frac{\partial u^1}{\partial x^{r3}} \\
+			\frac{\partial u^2}{\partial x^{r1}} & \frac{\partial u^2}{\partial x^{r2}} & \frac{\partial u^2}{\partial x^{r3}} \\
+			\frac{\partial u^3}{\partial x^{r1}} & \frac{\partial u^3}{\partial x^{r2}} & \frac{\partial u^3}{\partial x^{r3}}
+		\end{bmatrix}
+		}_{\displaystyle\nabla\utilde{\mathbf{u}}=\underline{\mathbf{L}}}
+		\underbrace{
+		\begin{Bmatrix}
+			dx^{r1} \\ dx^{r2} \\ dx^{r3}
+		\end{Bmatrix}
+		}_{\displaystyle d\utilde{\mathbf{x}}^r}
+	\]
+	
+	Onde $\nabla\utilde{\mathbf{u}}$ é o \textbf{gradiente dos deslocamentos}.
+	
+	Logo,
+	\[d\utilde{\mathbf{x}}=d\utilde{\mathbf{x}}^r+\nabla\utilde{\mathbf{u}}\;d\utilde{\mathbf{x}}^r\]
+	
+	Colocando $d\utilde{\mathbf{x}}^r$ em evidência, temos:
+	\[d\utilde{\mathbf{x}}=\underbrace{(\underline{\mathbf{I}}+\nabla\utilde{\mathbf{u}})}_{\displaystyle \underline{\mathbf{F}}}d\utilde{\mathbf{x}}^r\]
+	
+	Onde $\underline{\mathbf{F}}$ é o \textbf{gradiente das deformações}.
+	
+	Portanto, temos:
+	\begin{equation}
+	d\utilde{\mathbf{x}}=\underline{\mathbf{F}}\;d\utilde{\mathbf{x}}^r
+	\end{equation}
+	
+	Ou seja, a fibra deformada agora pode ser obtida a partir do gradiente dos deslocamentos ($\nabla\utilde{\mathbf{u}}$) e também a partir do gradiente das deformações ($\underline{\mathbf{F}}$).
+	
+	O gradiente das deformações pode ser reescrito como:
+	\[
+	\underline{\mathbf{F}}=
+	\begin{bmatrix}
+		1+\frac{\partial u^1}{\partial x^{r1}} & \frac{\partial u^1}{\partial x^{r2}} & \frac{\partial u^1}{\partial x^{r3}} \\
+		\frac{\partial u^2}{\partial x^{r1}} & 1+\frac{\partial u^2}{\partial x^{r2}} & \frac{\partial u^2}{\partial x^{r3}} \\
+		\frac{\partial u^3}{\partial x^{r1}} & \frac{\partial u^3}{\partial x^{r2}} & 1+\frac{\partial u^3}{\partial x^{r3}}
+	\end{bmatrix}
+	\]
+	
+	Ou ainda, usando notação indicial de Einstein:
+	\[F_{ij}=\nabla u_{ij}+\delta_{ij}\]
+	
+	Onde $\delta_{ij}$ é o delta de Kronecker, \textit{i.e.}: $\delta_{ij}=\begin{cases} 1, & \text{se } i=j \\ 0, & \text{se } i\neq j \end{cases}$
+	
+	E em notação indicial, temos:
+	\[\nabla u_{ij}=\frac{\partial u^i}{\partial x^{rj}}\]
+	
+	Agora, expressemos:
+	\[\utilde{\mathbf{u}}=\utilde{\mathbf{x}}-\utilde{\mathbf{x}}^r\implies \utilde{\mathbf{x}}=\utilde{\mathbf{u}}+\utilde{\mathbf{x}}^r\]
+	\[x^i=u^i+x^{ri}\]
+	
+	Derivando ambos os lados da notação indicial acima em relação a $\utilde{\mathbf{x}}^r$, temos:
+	\[\underbrace{\frac{\partial x^i}{\partial x^{rj}}}_{\displaystyle\underline{\mathbf{F}}}=\underbrace{\frac{\partial u^i}{\partial x^{rj}}}_{\displaystyle\nabla u_{ij}}+\underbrace{\frac{\partial x^{ri}}{\partial x^{rj}}}_{\displaystyle\delta_{ij}}\]
+	
+	Ou seja, agora o gradiente das deformações está em função da transformação e sua forma matricial é:
+	\[
+	\underline{\mathbf{F}}=
+	\begin{bmatrix}
+		\frac{\partial x^1}{\partial x^{r1}} & \frac{\partial x^1}{\partial x^{r2}} & \frac{\partial x^1}{\partial x^{r3}} \\
+		\frac{\partial x^2}{\partial x^{r1}} & \frac{\partial x^2}{\partial x^{r2}} & \frac{\partial x^2}{\partial x^{r3}} \\
+		\frac{\partial x^3}{\partial x^{r1}} & \frac{\partial x^3}{\partial x^{r2}} & \frac{\partial x^3}{\partial x^{r3}}
+	\end{bmatrix}	
+	\]
+	
+	Lembrete sobre operadores lineares:
+	
+	$\underline{\mathbf{F}}$ e $\nabla\utilde{\mathbf{u}}$  são operadores lineares de $E\rightarrow E$. Seja $\mathbf{\underline{T}}$ um operador linear:
+	\[\mathbf{\underline{T}}(\alpha\utilde{\mathbf{x}}+\beta\utilde{\mathbf{y}})=\alpha\mathbf{\underline{T}}\utilde{\mathbf{x}}+\beta\mathbf{\underline{T}}\utilde{\mathbf{y}},\;\forall\;\mathbf{\utilde{\mathbf{x}}}\text{ e }\mathbf{\utilde{\mathbf{y}}}\in\text{$E$}\]
+	
+	//Inserir imagem
+	
+	\[
+		\begin{Bmatrix}
+		b_1 \\ b_2 \\ b_3
+		\end{Bmatrix}
+		=
+		\underbrace{
+		\begin{bmatrix}
+		T_{11} & T_{12} & T_{13} \\
+		T_{21} & T_{22} & T_{23} \\
+		T_{31} & T_{32} & T_{33}
+		\end{bmatrix}
+		}_{\displaystyle\mathbf{\underline{T}}}
+		\begin{Bmatrix}
+		a_1 \\ a_2 \\ a_3
+		\end{Bmatrix}
+	\]
+	
+	Obs: Para o curso, um operador linear tem a mesma função de um tensor (simplificando).
+	
+	\subsection{Tensor das Deformações de Green-Lagrange}
+	
+	//Inserir imagem
+	
+	Onde $\hat{\utilde{\mathbf{m}}}^r$ é um versor, $\displaystyle\frac{d\utilde{\mathbf{x}}^r}{||d\utilde{\mathbf{x}}^r||}=1$, $ds^r$ é o comprimento infinitesimal de uma fibra na configuração de referência na direção de $\hat{\utilde{\mathbf{m}}}^r$ e $ds$ é o comprimento dessa mesma fibra na configuração deformada. Os comprimentos são definidos como:
+	\[ds^r=||d\utilde{\mathbf{x}}^r||=(d\utilde{\mathbf{x}}^r\cdot d\utilde{\mathbf{x}}^r)^{\frac{1}{2}}\]
+	\[ds=||d\utilde{\mathbf{x}}||=(d\utilde{\mathbf{x}}\cdot d\utilde{\mathbf{x}})^{\frac{1}{2}}\]
+	
+	Lembrando sobre operadores lineares: Seja $\underline{\mathbf{A}}$ um operador linear ou tensor, temos
+	\[\utilde{\mathbf{a}}\cdot\underline{\mathbf{A}}\utilde{\mathbf{b}}=\utilde{\mathbf{b}}\cdot\underline{\mathbf{A}}^T\utilde{\mathbf{a}},\;\forall\;\mathbf{\utilde{\mathbf{a}}}\text{ e }\mathbf{\utilde{\mathbf{b}}}\in\text{$E$}\]
+	
+	Quando $\underline{\mathbf{A}}=\underline{\mathbf{A}}^T$, $\underline{\mathbf{A}}$ é simétrico.
+	
+	\textbf{Exemplo}: A \textit{interpolação quadrática} ou \textit{alongamento quadrático} é definida como:
+	\[Eq=\frac{1}{2}\frac{(ds)^2-(ds^r)^2}{(ds^r)^2}\]
+	
+	Sabendo que,
+	\[ds^2=d\utilde{\mathbf{x}}\cdot d\utilde{\mathbf{x}}=\underbrace{\underline{\mathbf{F}}d\utilde{\mathbf{x}}^r}_{\displaystyle\utilde{\mathbf{v}}}\cdot\underline{\mathbf{F}}d\utilde{\mathbf{x}}^r\]
+	\[ds^2=\utilde{\mathbf{v}}\cdot\underline{\mathbf{F}}d\utilde{\mathbf{x}}^r\]
+	\[ds^2=d\utilde{\mathbf{x}}^r\cdot\underline{\mathbf{F}}^T\utilde{\mathbf{v}}\]
+	\[ds^2=d\utilde{\mathbf{x}}^r\cdot\underline{\mathbf{F}}^T\underline{\mathbf{F}}d\utilde{\mathbf{x}}^r\]
+	
+	Logo,
+	\[Eq=\frac{1}{2}\frac{(d\utilde{\mathbf{x}}^r\cdot\underline{\mathbf{F}}^T\underline{\mathbf{F}}d\utilde{\mathbf{x}}^r)-(d\utilde{\mathbf{x}}^r\cdot d\utilde{\mathbf{x}}^r)}{d\utilde{\mathbf{x}}^r\cdot d\utilde{\mathbf{x}}^r}\]
+	
+	Lembrando que,
+	\[d\utilde{\mathbf{x}}^r=||d\utilde{\mathbf{x}}^r||\hat{\utilde{\mathbf{m}}}^r=ds^r\hat{\utilde{\mathbf{m}}}^r\]
+	
+	Então,
+	\[Eq=\frac{1}{2}\frac{(ds^r\hat{\utilde{\mathbf{m}}}^r\cdot\underline{\mathbf{F}}^T\underline{\mathbf{F}}d\utilde{\mathbf{x}}^r)-(ds^r\hat{\utilde{\mathbf{m}}}^r\cdot ds^r\hat{\utilde{\mathbf{m}}}^r)}{ds^r\hat{\utilde{\mathbf{m}}}^r\cdot ds^r\hat{\utilde{\mathbf{m}}}^r}\]
+	\[Eq=\frac{1}{2}\frac{ds^r\hat{\utilde{\mathbf{m}}}^r\cdot(\underline{\mathbf{F}}^T\underline{\mathbf{F}}-\underline{\mathbf{I}})ds^r\hat{\utilde{\mathbf{m}}}^r}{ds^r\hat{\utilde{\mathbf{m}}}^r\cdot ds^r\hat{\utilde{\mathbf{m}}}^r}\]
+	\[Eq=\frac{1}{2}[\hat{\utilde{\mathbf{m}}}^r\cdot(\underline{\mathbf{F}}^T\underline{\mathbf{F}}-\underline{\mathbf{I}})\hat{\utilde{\mathbf{m}}}^r]\]
+	\[Eq=\hat{\utilde{\mathbf{m}}}^r\cdot\underbrace{\frac{1}{2}(\underline{\mathbf{F}}^T\underline{\mathbf{F}}-\underline{\mathbf{I}})}_{\displaystyle\underline{\mathbf{E}}}\hat{\utilde{\mathbf{m}}}^r\]
+	
+	\[\underline{\mathbf{E}}=\frac{1}{2}(\underline{\mathbf{F}}^T\underline{\mathbf{F}}-\underline{\mathbf{I}})\]
+	\[Eq(\hat{\utilde{\mathbf{m}}}^r)=\hat{\utilde{\mathbf{m}}}^r\cdot\underline{\mathbf{E}}\hat{\utilde{\mathbf{m}}}^r\]
+	
+	Onde $\underline{\mathbf{E}}$ é o Tensor das Deformações de Green-Lagrange e vale para qualquer magnitude de deslocamento. Algumas literaturas chamam de \textit{finite displacement} os deslocamentos de qualquer magnitude.
+	
+	Agora na notação de Einstein:
+	\[E_{ij}=\frac{1}{2}\left(\frac{\partial x^k}{\partial x^{ri}}\frac{\partial x^k}{\partial x^{rj}}-\delta_{ij}\right)\]
+	
+	Expressando os componentes de $\underline{\mathbf{E}}$ a partir do campo de deslocamentos:
+	\[\underline{\mathbf{E}}=\frac{1}{2}[(\nabla\utilde{\mathbf{u}}^T+\underline{\mathbf{I}})(\nabla\utilde{\mathbf{u}}+\underline{\mathbf{I}})-\underline{\mathbf{I}}]\]
+	\[\underline{\mathbf{E}}=\frac{1}{2}(\nabla\utilde{\mathbf{u}}^T\nabla\utilde{\mathbf{u}}+\nabla\utilde{\mathbf{u}}^T+\nabla\utilde{\mathbf{u}}+\underline{\mathbf{I}}-\underline{\mathbf{I}})\]
+	\[\underline{\mathbf{E}}=\frac{1}{2}(\nabla\utilde{\mathbf{u}}+\nabla\utilde{\mathbf{u}}^T+\nabla\utilde{\mathbf{u}}^T\nabla\utilde{\mathbf{u}})\]
+	
+	Na notação de Einstein:
+	\[E_{ij}=\frac{1}{2}\left(\frac{\partial u^i}{\partial x^{rj}}+\frac{\partial u^j}{\partial x^{ri}}+\underbrace{\frac{\partial u^k}{\partial x^{ri}}\frac{\partial u^k}{\partial x^{rj}}}_{*}\right)\]
+	
+	Sendo $*$:
+	\[\frac{\partial u^k}{\partial x^{ri}}\frac{\partial u^k}{\partial x^{rj}}=\frac{\partial u^1}{\partial x^{ri}}\frac{\partial u^1}{\partial x^{rj}}+\frac{\partial u^2}{\partial x^{ri}}\frac{\partial u^2}{\partial x^{rj}}+\frac{\partial u^3}{\partial x^{ri}}\frac{\partial u^3}{\partial x^{rj}}\]
+	
+	Acima, $E_{ij}$ denota equações de compatibilidade; uma relação deslocamentos-deformações.
