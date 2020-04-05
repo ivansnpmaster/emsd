@@ -248,7 +248,7 @@
 	Quando $\underline{\mathbf{A}}=\underline{\mathbf{A}}^T$, $\underline{\mathbf{A}}$ é simétrico.
 	
 	\textbf{Exemplo}: A \textit{interpolação quadrática} ou \textit{alongamento quadrático} é definida como:
-	\[Eq=\frac{1}{2}\frac{(ds)^2-(ds^r)^2}{(ds^r)^2}\]
+	\[\varepsilon_q=\frac{1}{2}\frac{(ds)^2-(ds^r)^2}{(ds^r)^2}\]
 	
 	Sabendo que,
 	\[ds^2=d\utilde{\mathbf{x}}\cdot d\utilde{\mathbf{x}}=\underbrace{\underline{\mathbf{F}}d\utilde{\mathbf{x}}^r}_{\displaystyle\utilde{\mathbf{v}}}\cdot\underline{\mathbf{F}}d\utilde{\mathbf{x}}^r\]
@@ -257,19 +257,19 @@
 	\[ds^2=d\utilde{\mathbf{x}}^r\cdot\underline{\mathbf{F}}^T\underline{\mathbf{F}}d\utilde{\mathbf{x}}^r\]
 	
 	Logo,
-	\[Eq=\frac{1}{2}\frac{(d\utilde{\mathbf{x}}^r\cdot\underline{\mathbf{F}}^T\underline{\mathbf{F}}d\utilde{\mathbf{x}}^r)-(d\utilde{\mathbf{x}}^r\cdot d\utilde{\mathbf{x}}^r)}{d\utilde{\mathbf{x}}^r\cdot d\utilde{\mathbf{x}}^r}\]
+	\[\varepsilon_q=\frac{1}{2}\frac{(d\utilde{\mathbf{x}}^r\cdot\underline{\mathbf{F}}^T\underline{\mathbf{F}}d\utilde{\mathbf{x}}^r)-(d\utilde{\mathbf{x}}^r\cdot d\utilde{\mathbf{x}}^r)}{d\utilde{\mathbf{x}}^r\cdot d\utilde{\mathbf{x}}^r}\]
 	
 	Lembrando que,
 	\[d\utilde{\mathbf{x}}^r=||d\utilde{\mathbf{x}}^r||\hat{\utilde{\mathbf{m}}}^r=ds^r\hat{\utilde{\mathbf{m}}}^r\]
 	
 	Então,
-	\[Eq=\frac{1}{2}\frac{(ds^r\hat{\utilde{\mathbf{m}}}^r\cdot\underline{\mathbf{F}}^T\underline{\mathbf{F}}d\utilde{\mathbf{x}}^r)-(ds^r\hat{\utilde{\mathbf{m}}}^r\cdot ds^r\hat{\utilde{\mathbf{m}}}^r)}{ds^r\hat{\utilde{\mathbf{m}}}^r\cdot ds^r\hat{\utilde{\mathbf{m}}}^r}\]
-	\[Eq=\frac{1}{2}\frac{ds^r\hat{\utilde{\mathbf{m}}}^r\cdot(\underline{\mathbf{F}}^T\underline{\mathbf{F}}-\underline{\mathbf{I}})ds^r\hat{\utilde{\mathbf{m}}}^r}{ds^r\hat{\utilde{\mathbf{m}}}^r\cdot ds^r\hat{\utilde{\mathbf{m}}}^r}\]
-	\[Eq=\frac{1}{2}[\hat{\utilde{\mathbf{m}}}^r\cdot(\underline{\mathbf{F}}^T\underline{\mathbf{F}}-\underline{\mathbf{I}})\hat{\utilde{\mathbf{m}}}^r]\]
-	\[Eq=\hat{\utilde{\mathbf{m}}}^r\cdot\underbrace{\frac{1}{2}(\underline{\mathbf{F}}^T\underline{\mathbf{F}}-\underline{\mathbf{I}})}_{\displaystyle\underline{\mathbf{E}}}\hat{\utilde{\mathbf{m}}}^r\]
+	\[\varepsilon_q=\frac{1}{2}\frac{(ds^r\hat{\utilde{\mathbf{m}}}^r\cdot\underline{\mathbf{F}}^T\underline{\mathbf{F}}d\utilde{\mathbf{x}}^r)-(ds^r\hat{\utilde{\mathbf{m}}}^r\cdot ds^r\hat{\utilde{\mathbf{m}}}^r)}{ds^r\hat{\utilde{\mathbf{m}}}^r\cdot ds^r\hat{\utilde{\mathbf{m}}}^r}\]
+	\[\varepsilon_q=\frac{1}{2}\frac{ds^r\hat{\utilde{\mathbf{m}}}^r\cdot(\underline{\mathbf{F}}^T\underline{\mathbf{F}}-\underline{\mathbf{I}})ds^r\hat{\utilde{\mathbf{m}}}^r}{ds^r\hat{\utilde{\mathbf{m}}}^r\cdot ds^r\hat{\utilde{\mathbf{m}}}^r}\]
+	\[\varepsilon_q=\frac{1}{2}[\hat{\utilde{\mathbf{m}}}^r\cdot(\underline{\mathbf{F}}^T\underline{\mathbf{F}}-\underline{\mathbf{I}})\hat{\utilde{\mathbf{m}}}^r]\]
+	\[\varepsilon_q=\hat{\utilde{\mathbf{m}}}^r\cdot\underbrace{\frac{1}{2}(\underline{\mathbf{F}}^T\underline{\mathbf{F}}-\underline{\mathbf{I}})}_{\displaystyle\underline{\mathbf{E}}}\hat{\utilde{\mathbf{m}}}^r\]
 	
 	\[\underline{\mathbf{E}}=\frac{1}{2}(\underline{\mathbf{F}}^T\underline{\mathbf{F}}-\underline{\mathbf{I}})\]
-	\[Eq(\hat{\utilde{\mathbf{m}}}^r)=\hat{\utilde{\mathbf{m}}}^r\cdot\underline{\mathbf{E}}\hat{\utilde{\mathbf{m}}}^r\]
+	\[\varepsilon_q(\hat{\utilde{\mathbf{m}}}^r)=\hat{\utilde{\mathbf{m}}}^r\cdot\underline{\mathbf{E}}\hat{\utilde{\mathbf{m}}}^r\]
 	
 	Onde $\underline{\mathbf{E}}$ é o Tensor das Deformações de Green-Lagrange e vale para qualquer magnitude de deslocamento. Algumas literaturas chamam de \textit{finite displacement} os deslocamentos de qualquer magnitude.
 	
@@ -288,3 +288,214 @@
 	\[\frac{\partial u^k}{\partial x^{ri}}\frac{\partial u^k}{\partial x^{rj}}=\frac{\partial u^1}{\partial x^{ri}}\frac{\partial u^1}{\partial x^{rj}}+\frac{\partial u^2}{\partial x^{ri}}\frac{\partial u^2}{\partial x^{rj}}+\frac{\partial u^3}{\partial x^{ri}}\frac{\partial u^3}{\partial x^{rj}}\]
 	
 	Acima, $E_{ij}$ denota equações de compatibilidade; uma relação deslocamentos-deformações.
+	
+	\subsection{Medidas de deformação/alongamento}
+	
+	\begin{itemize}
+		\item Estiramento ou \textit{stretch}:
+			\[\lambda=\frac{ds}{ds^r}\]
+		\item Alongamento linear:
+			\[\varepsilon_l=\frac{ds-ds^r}{ds^r}\]
+		\item Alongamento quadrático:
+			\[\varepsilon_q=\frac{1}{2}\frac{(ds)^2-(ds^r)^2}{(ds^r)^2}=\frac{1}{2}\left[\left(\frac{ds}{ds^r}\right)^2-1\right]=\frac{1}{2}(\lambda^2-1)\]
+		\item Alongamento logarítmico ou de Henry:
+			\[\varepsilon_n=\ln \left(\frac{ds}{ds^r}\right)\]
+		\item Alongamento hiperbólico ou de Reiner:
+			\[\varepsilon_h=\frac{ds^r}{ds}\]
+		\item Alongamento hiperbólico quadrático ou de Almansi:
+			\[\varepsilon_{hq}=\frac{1}{2}\frac{(ds^r)^2-(ds)^2}{(ds)^2}\]
+	\end{itemize}
+	
+	\subsubsection{Relação entre alongamentos quadráticos e lineares}
+	
+	Para o alongamento quadrático:
+	\[\varepsilon_q=\frac{1}{2}(\lambda^2-1)\]
+	\[\lambda^2=1+2\varepsilon_q\]
+	\[\lambda=\sqrt{1+2\varepsilon_q}\]
+	\[\lambda(\hat{\utilde{\mathbf{m}}}^r)=\sqrt{1+2(\hat{\utilde{\mathbf{m}}}^r\cdot\underline{\mathbf{E}}\hat{\utilde{\mathbf{m}}}^r)}\]
+	
+	Para o alongamento linear:
+	\[\varepsilon_l=\lambda-1\]
+	\[\varepsilon_l(\hat{\utilde{\mathbf{m}}}^r)=\sqrt{1+2(\hat{\utilde{\mathbf{m}}}^r\cdot\underline{\mathbf{E}}\hat{\utilde{\mathbf{m}}}^r)}-1\]
+	\[\varepsilon_l(\hat{\utilde{\mathbf{m}}}^r)=\sqrt{1+2\varepsilon_q}-1\]
+	
+	\subsection{Variação do ângulo entre fibras (distorção)}
+	
+	//Inserir imagem
+	
+	\begin{itemize}
+		\item $d\utilde{\mathbf{a}}^r$ e $d\utilde{\mathbf{b}}^r$ são inicialmente ortogonais;
+		\item $\underline{\mathbf{F}}$ e $d\utilde{\mathbf{a}}^r$ tem a mesma direção de $d\utilde{\mathbf{a}}$ (hipótese);
+		\item $\hat{\utilde{\mathbf{a}}}$ e $\hat{\utilde{\mathbf{b}}}$ são versores.
+	\end{itemize}
+	
+	Lembrando que,
+	\[d\utilde{\mathbf{a}}=\underline{\mathbf{F}}d\utilde{\mathbf{a}}^r\text{ e }d\utilde{\mathbf{b}}=\underline{\mathbf{F}}d\utilde{\mathbf{b}}^r\]
+	
+	A fim de encontrar novas relações, podemos definir o produto escalar,
+	\[d\utilde{\mathbf{a}}\cdot d\utilde{\mathbf{b}}=\underline{\mathbf{F}}d\utilde{\mathbf{a}}^r\cdot\underline{\mathbf{F}}d\utilde{\mathbf{b}}^r\]
+	\[d\utilde{\mathbf{a}}\cdot d\utilde{\mathbf{b}}=||\underline{\mathbf{F}}d\utilde{\mathbf{a}}^r||\;|| \underline{\mathbf{F}}d\utilde{\mathbf{b}}^r ||\cos\theta\]
+	
+	Logo,
+	\begin{equation}\label{eq-variacao-angulo-fibras}
+		\cos\theta=\sin\gamma=\frac{\underline{\mathbf{F}}d\utilde{\mathbf{a}}^r\cdot\underline{\mathbf{F}}d\utilde{\mathbf{b}}^r}{||\underline{\mathbf{F}}d\utilde{\mathbf{a}}^r||\;|| \underline{\mathbf{F}}d\utilde{\mathbf{b}}^r ||}
+	\end{equation}
+	
+	E,
+	\[d\utilde{\mathbf{a}}^r=d\mathbf{a}^r\hat{\utilde{\mathbf{a}}}^r\]
+	\[d\utilde{\mathbf{b}}^r=d\mathbf{b}^r\hat{\utilde{\mathbf{b}}}^r\]
+	\[||\underline{\mathbf{F}}d\utilde{\mathbf{a}}^r||=\sqrt{\underline{\mathbf{F}}d\utilde{\mathbf{a}}^r\cdot\underline{\mathbf{F}}d\utilde{\mathbf{a}}^r}\]
+	\[||\underline{\mathbf{F}}d\utilde{\mathbf{b}}^r||=\sqrt{\underline{\mathbf{F}}d\utilde{\mathbf{b}}^r\cdot\underline{\mathbf{F}}d\utilde{\mathbf{b}}^r}\]
+	
+	Substituindo as 4 relações acima na Equação \eqref{eq-variacao-angulo-fibras},
+	\[\sin\gamma=\frac{d\utilde{\mathbf{b}}^r\cdot\underline{\mathbf{F}}^T\underline{\mathbf{F}}d\utilde{\mathbf{a}}^r}{\sqrt{d\utilde{\mathbf{a}}^r\cdot\underline{\mathbf{F}}^T\underline{\mathbf{F}}d\utilde{\mathbf{a}}^r}\sqrt{d\utilde{\mathbf{b}}^r\cdot\underline{\mathbf{F}}^T\underline{\mathbf{F}}d\utilde{\mathbf{b}}^r}}\]
+	
+	\[\sin\gamma=\frac{(d\mathbf{b}^r\hat{\utilde{\mathbf{b}}}^r)\cdot[\underline{\mathbf{F}}^T\underline{\mathbf{F}}(d\mathbf{a}^r\hat{\utilde{\mathbf{a}}}^r)]}{\sqrt{(d\mathbf{a}^r\hat{\utilde{\mathbf{a}}}^r)\cdot[\underline{\mathbf{F}}^T\underline{\mathbf{F}}(d\mathbf{a}^r\hat{\utilde{\mathbf{a}}}^r)]}\sqrt{(d\mathbf{b}^r\hat{\utilde{\mathbf{b}}}^r)\cdot[\underline{\mathbf{F}}^T\underline{\mathbf{F}}(d\mathbf{b}^r\hat{\utilde{\mathbf{b}}}^r)]}}\]
+	
+	\[\sin\gamma=\frac{(d\mathbf{b}^rd\mathbf{a}^r)[\hat{\utilde{\mathbf{b}}}^r\cdot\underline{\mathbf{F}}^T\underline{\mathbf{F}}\hat{\utilde{\mathbf{a}}}^r]}{(d\mathbf{b}^rd\mathbf{a}^r)\sqrt{\hat{\utilde{\mathbf{a}}}^r\cdot\underline{\mathbf{F}}^T\underline{\mathbf{F}}\hat{\utilde{\mathbf{a}}}^r}\sqrt{\hat{\utilde{\mathbf{b}}}^r\cdot\underline{\mathbf{F}}^T\underline{\mathbf{F}}\hat{\utilde{\mathbf{b}}}^r}}\]
+	
+	\begin{equation}\label{eq-distorcao-fibra-1}
+		\sin\gamma=\frac{\hat{\utilde{\mathbf{b}}}^r\cdot\underline{\mathbf{F}}^T\underline{\mathbf{F}}\hat{\utilde{\mathbf{a}}}^r}{\sqrt{\hat{\utilde{\mathbf{a}}}^r\cdot\underline{\mathbf{F}}^T\underline{\mathbf{F}}\hat{\utilde{\mathbf{a}}}^r}\sqrt{\hat{\utilde{\mathbf{b}}}^r\cdot\underline{\mathbf{F}}^T\underline{\mathbf{F}}\hat{\utilde{\mathbf{b}}}^r}}
+	\end{equation}		
+
+	Lembrando que,
+	\[\underline{\mathbf{E}}=\frac{1}{2}(\underline{\mathbf{F}}^T\underline{\mathbf{F}}-\underline{\mathbf{I}})\]
+	\[\underline{\mathbf{F}}^T\underline{\mathbf{F}}=2\underline{\mathbf{E}}+\underline{\mathbf{I}}\]
+	
+	Substituindo a expressão acima na Equação \eqref{eq-distorcao-fibra-1},
+	\[\sin\gamma=\frac{\hat{\utilde{\mathbf{b}}}^r\cdot(2\underline{\mathbf{E}}+\underline{\mathbf{I}})\hat{\utilde{\mathbf{a}}}^r}{\sqrt{\hat{\utilde{\mathbf{a}}}^r\cdot(2\underline{\mathbf{E}}+\underline{\mathbf{I}})\hat{\utilde{\mathbf{a}}}^r}\sqrt{\hat{\utilde{\mathbf{b}}}^r\cdot(2\underline{\mathbf{E}}+\underline{\mathbf{I}})\hat{\utilde{\mathbf{b}}}^r}}\]
+	\[(2\underline{\mathbf{E}}+\underline{\mathbf{I}})\hat{\utilde{\mathbf{a}}}^r=2\underline{\mathbf{E}}\hat{\utilde{\mathbf{a}}}^r+\underline{\mathbf{I}}\hat{\utilde{\mathbf{a}}}^r=2\underline{\mathbf{E}}\hat{\utilde{\mathbf{a}}}^r+\hat{\utilde{\mathbf{a}}}^r\]
+	
+	\[\sin\gamma=\frac{\hat{\utilde{\mathbf{b}}}^r\cdot(2\underline{\mathbf{E}}\hat{\utilde{\mathbf{a}}}^r+\hat{\utilde{\mathbf{a}}}^r)}{\sqrt{\hat{\utilde{\mathbf{a}}}^r\cdot(2\underline{\mathbf{E}}\hat{\utilde{\mathbf{a}}}^r+\hat{\utilde{\mathbf{a}}}^r)}\sqrt{\hat{\utilde{\mathbf{b}}}^r\cdot(2\underline{\mathbf{E}}\hat{\utilde{\mathbf{b}}}^r+\hat{\utilde{\mathbf{b}}}^r)}}\]
+	
+	\[\sin\gamma=\frac{\hat{\utilde{\mathbf{b}}}^r\cdot2\underline{\mathbf{E}}\hat{\utilde{\mathbf{a}}}^r+\hat{\utilde{\mathbf{b}}}^r\cdot\hat{\utilde{\mathbf{a}}}^r}{\displaystyle\sqrt{\hat{\utilde{\mathbf{a}}}^r\cdot2\underline{\mathbf{E}}\hat{\utilde{\mathbf{a}}}^r+\hat{\utilde{\mathbf{a}}}^r\cdot\hat{\utilde{\mathbf{a}}}^r}\sqrt{\hat{\utilde{\mathbf{b}}}^r\cdot2\underline{\mathbf{E}}\hat{\utilde{\mathbf{b}}}^r+\hat{\utilde{\mathbf{b}}}^r\cdot\hat{\utilde{\mathbf{b}}}^r}}\]
+	
+	Por fim,
+	\begin{equation}\label{eq-distorcao-fibra-2}
+		\sin\gamma(\hat{\utilde{\mathbf{a}}}^r,\hat{\utilde{\mathbf{b}}}^r)=\frac{2(\hat{\utilde{\mathbf{b}}}^r\cdot\underline{\mathbf{E}}\hat{\utilde{\mathbf{a}}}^r)}{\displaystyle\sqrt{2(\hat{\utilde{\mathbf{a}}}^r\cdot\underline{\mathbf{E}}\hat{\utilde{\mathbf{a}}}^r)+1}\sqrt{2(\hat{\utilde{\mathbf{b}}}^r\cdot\underline{\mathbf{E}}\hat{\utilde{\mathbf{b}}}^r)+1}}
+	\end{equation}
+	
+	Onde $\gamma$ é a distorção, \textit{i.e.}, a variação de ângulo entre duas fibras inicialmente ortogonais.
+	
+	\subsection{Interpretação de $\underline{\mathbf{E}}$}
+	
+	Partindo-se de uma base ortonormal ($\utilde{e_1}$, $\utilde{e_2}$, $\utilde{e_3}$), o Tensor das Deformações de Green-Lagrange é definido como,
+	\[
+	\underline{\mathbf{E}}
+	=
+	\begin{bmatrix}
+	E_{11} & E_{12} & E_{13} \\
+	E_{21} & E_{22} & E_{23} \\
+	E_{31} & E_{32} & E_{33}
+	\end{bmatrix}
+	\]
+	
+	Lembrando do alongamento quadrático, por exemplo, de uma fibra alinhada na direção de $\utilde{\mathbf{\hat{e}_1}}$,
+	\[\varepsilon_q(\utilde{\mathbf{\hat{e}_1}})=\utilde{\mathbf{\hat{e}_1}}\cdot\underline{\mathbf{E}}\utilde{\mathbf{\hat{e}_1}}\]
+	\[
+	\varepsilon_q(\utilde{\mathbf{\hat{e}_1}})
+	=
+	\begin{Bmatrix}
+	1 & 0 & 0
+	\end{Bmatrix}
+	\cdot
+	\begin{bmatrix}
+	E_{11} & E_{12} & E_{13} \\
+	E_{21} & E_{22} & E_{23} \\
+	E_{31} & E_{32} & E_{33}
+	\end{bmatrix}
+	\begin{Bmatrix}
+	1 \\ 0 \\ 0
+	\end{Bmatrix}
+	\]
+	\[
+	\varepsilon_q(\utilde{\mathbf{\hat{e}_1}})
+	=
+	\begin{Bmatrix}
+	1 & 0 & 0
+	\end{Bmatrix}
+	\cdot
+	\begin{Bmatrix}
+	E_{11} \\ E_{22} \\ E_{33}
+	\end{Bmatrix}
+	=
+	E_{11}
+	\]
+	
+	Da mesma forma, uma fibra na direção de $\utilde{\mathbf{\hat{e}_2}}$ ou $\utilde{\mathbf{\hat{e}_3}}$,
+	\[\varepsilon_q(\utilde{\mathbf{\hat{e}_2}})=E_{22}\]
+	\[\varepsilon_q(\utilde{\mathbf{\hat{e}_3}})=E_{33}\]
+	
+	Ou seja, a diagonal de $\underline{\mathbf{E}}$ guarda o alongamento quadrático. E quanto à distorção? Escolhendo dois vetores da base ortonormal quaisqueres, por exemplo, $\utilde{\mathbf{\hat{e}_1}}$ e $\utilde{\mathbf{\hat{e}_2}}$ e lembrando da Equação \eqref{eq-distorcao-fibra-2},
+	\begin{equation}\label{eq-distorcao-fibra-3}
+		\sin\gamma(\utilde{\mathbf{\hat{e}_1}},\utilde{\mathbf{\hat{e}_2}})=\frac{2(\utilde{\mathbf{\hat{e}_2}}\cdot\underline{\mathbf{E}}\utilde{\mathbf{\hat{e}_1}})}{\displaystyle\sqrt{2(\utilde{\mathbf{\hat{e}_1}}\cdot\underline{\mathbf{E}}\utilde{\mathbf{\hat{e}_1}})+1}\sqrt{2(\utilde{\mathbf{\hat{e}_2}}\cdot\underline{\mathbf{E}}\utilde{\mathbf{\hat{e}_2}})+1}}
+	\end{equation}
+	
+	Desenvolvendo o produto escalar no numerador da expressão acima na equação do alongamento quadrático,
+	\[\varepsilon_q=\utilde{\mathbf{\hat{e}_2}}\cdot\underline{\mathbf{E}}\utilde{\mathbf{\hat{e}_1}}\]
+	\[
+	\varepsilon_q
+	=
+	\begin{Bmatrix}
+	0 & 1 & 0
+	\end{Bmatrix}
+	\cdot
+	\begin{bmatrix}
+	E_{11} & E_{12} & E_{13} \\
+	E_{21} & E_{22} & E_{23} \\
+	E_{31} & E_{32} & E_{33}
+	\end{bmatrix}
+	\begin{Bmatrix}
+	1 \\ 0 \\ 0
+	\end{Bmatrix}
+	\]
+	\[
+	\varepsilon_q
+	=
+	\begin{Bmatrix}
+	0 & 1 & 0
+	\end{Bmatrix}
+	\cdot
+	\begin{Bmatrix}
+	E_{11} \\ E_{21} \\ E_{31}
+	\end{Bmatrix}
+	=
+	E_{21}	
+	\]
+	
+	Agora, invertendo os versores escolhidos para a Equação \eqref{eq-distorcao-fibra-2} e como o denominador continuará o mesmo, só o numerador sofrerá alteração. Desenvolvendo-o da mesma forma na equação do alongamento quadrático,
+	\[\varepsilon_q=\utilde{\mathbf{\hat{e}_1}}\cdot\underline{\mathbf{E}}\utilde{\mathbf{\hat{e}_2}}\]
+	\[
+	\varepsilon_q
+	=
+	\begin{Bmatrix}
+	1 & 0 & 0
+	\end{Bmatrix}
+	\cdot
+	\begin{bmatrix}
+	E_{11} & E_{12} & E_{13} \\
+	E_{21} & E_{22} & E_{23} \\
+	E_{31} & E_{32} & E_{33}
+	\end{bmatrix}
+	\begin{Bmatrix}
+	0 \\ 1 \\ 0
+	\end{Bmatrix}
+	\]
+	\[
+	\varepsilon_q
+	=
+	\begin{Bmatrix}
+	1 & 0 & 0
+	\end{Bmatrix}
+	\cdot
+	\begin{Bmatrix}
+	E_{12} \\ E_{22} \\ E_{32}
+	\end{Bmatrix}
+	=
+	E_{12}
+	\]
+	
+	Ou seja, como a distorção entre esses versores deve ser igual, apenas invertendo os versores utilizados pode-se chegar a conclusão de que $E_{21}=E_{12}$. Isso significa que $\underline{\mathbf{E}}$ é simétrico.
+	
+	Pode-se reescrever a Equação \eqref{eq-distorcao-fibra-3} como,
+	\[\sin\gamma(\utilde{\mathbf{\hat{e}_1}},\utilde{\mathbf{\hat{e}_2}})=\frac{2E_{21}}{\displaystyle\sqrt{2E_{11}+1}\sqrt{2E_{22}+1}}\]
