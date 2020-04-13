@@ -243,9 +243,9 @@
 	\[ds=||d\utilde{\mathbf{x}}||=(d\utilde{\mathbf{x}}\cdot d\utilde{\mathbf{x}})^{\frac{1}{2}}\]
 	
 	Lembrando sobre operadores lineares: Seja $\underline{\mathbf{A}}$ um operador linear ou tensor, temos
-	\[\utilde{\mathbf{a}}\cdot\underline{\mathbf{A}}\utilde{\mathbf{b}}=\utilde{\mathbf{b}}\cdot\underline{\mathbf{A}}^T\utilde{\mathbf{a}},\;\forall\;\mathbf{\utilde{\mathbf{a}}}\text{ e }\mathbf{\utilde{\mathbf{b}}}\in\text{$E$}\]
+	\[\utilde{\mathbf{a}}\cdot\underline{\mathbf{A}}\utilde{\mathbf{b}}=\utilde{\mathbf{b}}\cdot\underline{\mathbf{A}}^{\text{T}}\utilde{\mathbf{a}},\;\forall\;\mathbf{\utilde{\mathbf{a}}}\text{ e }\mathbf{\utilde{\mathbf{b}}}\in\text{$E$}\]
 	
-	Quando $\underline{\mathbf{A}}=\underline{\mathbf{A}}^T$, $\underline{\mathbf{A}}$ é simétrico.
+	Quando $\underline{\mathbf{A}}=\underline{\mathbf{A}}^{\text{T}}$, $\underline{\mathbf{A}}$ é simétrico.
 	
 	\textbf{Exemplo}: A \textit{interpolação quadrática} ou \textit{alongamento quadrático} é definida como:
 	\[\varepsilon_q=\frac{1}{2}\frac{(ds)^2-(ds^r)^2}{(ds^r)^2}\]
@@ -253,22 +253,22 @@
 	Sabendo que,
 	\[ds^2=d\utilde{\mathbf{x}}\cdot d\utilde{\mathbf{x}}=\underbrace{\underline{\mathbf{F}}d\utilde{\mathbf{x}}^r}_{\displaystyle\utilde{\mathbf{v}}}\cdot\underline{\mathbf{F}}d\utilde{\mathbf{x}}^r\]
 	\[ds^2=\utilde{\mathbf{v}}\cdot\underline{\mathbf{F}}d\utilde{\mathbf{x}}^r\]
-	\[ds^2=d\utilde{\mathbf{x}}^r\cdot\underline{\mathbf{F}}^T\utilde{\mathbf{v}}\]
-	\[ds^2=d\utilde{\mathbf{x}}^r\cdot\underline{\mathbf{F}}^T\underline{\mathbf{F}}d\utilde{\mathbf{x}}^r\]
+	\[ds^2=d\utilde{\mathbf{x}}^r\cdot\underline{\mathbf{F}}^{\text{T}}\utilde{\mathbf{v}}\]
+	\[ds^2=d\utilde{\mathbf{x}}^r\cdot\underline{\mathbf{F}}^{\text{T}}\underline{\mathbf{F}}d\utilde{\mathbf{x}}^r\]
 	
 	Logo,
-	\[\varepsilon_q=\frac{1}{2}\frac{(d\utilde{\mathbf{x}}^r\cdot\underline{\mathbf{F}}^T\underline{\mathbf{F}}d\utilde{\mathbf{x}}^r)-(d\utilde{\mathbf{x}}^r\cdot d\utilde{\mathbf{x}}^r)}{d\utilde{\mathbf{x}}^r\cdot d\utilde{\mathbf{x}}^r}\]
+	\[\varepsilon_q=\frac{1}{2}\frac{(d\utilde{\mathbf{x}}^r\cdot\underline{\mathbf{F}}^{\text{T}}\underline{\mathbf{F}}d\utilde{\mathbf{x}}^r)-(d\utilde{\mathbf{x}}^r\cdot d\utilde{\mathbf{x}}^r)}{d\utilde{\mathbf{x}}^r\cdot d\utilde{\mathbf{x}}^r}\]
 	
 	Lembrando que,
 	\[d\utilde{\mathbf{x}}^r=||d\utilde{\mathbf{x}}^r||\hat{\utilde{\mathbf{m}}}^r=ds^r\hat{\utilde{\mathbf{m}}}^r\]
 	
 	Então,
-	\[\varepsilon_q=\frac{1}{2}\frac{(ds^r\hat{\utilde{\mathbf{m}}}^r\cdot\underline{\mathbf{F}}^T\underline{\mathbf{F}}d\utilde{\mathbf{x}}^r)-(ds^r\hat{\utilde{\mathbf{m}}}^r\cdot ds^r\hat{\utilde{\mathbf{m}}}^r)}{ds^r\hat{\utilde{\mathbf{m}}}^r\cdot ds^r\hat{\utilde{\mathbf{m}}}^r}\]
-	\[\varepsilon_q=\frac{1}{2}\frac{ds^r\hat{\utilde{\mathbf{m}}}^r\cdot(\underline{\mathbf{F}}^T\underline{\mathbf{F}}-\underline{\mathbf{I}})ds^r\hat{\utilde{\mathbf{m}}}^r}{ds^r\hat{\utilde{\mathbf{m}}}^r\cdot ds^r\hat{\utilde{\mathbf{m}}}^r}\]
-	\[\varepsilon_q=\frac{1}{2}[\hat{\utilde{\mathbf{m}}}^r\cdot(\underline{\mathbf{F}}^T\underline{\mathbf{F}}-\underline{\mathbf{I}})\hat{\utilde{\mathbf{m}}}^r]\]
-	\[\varepsilon_q=\hat{\utilde{\mathbf{m}}}^r\cdot\underbrace{\frac{1}{2}(\underline{\mathbf{F}}^T\underline{\mathbf{F}}-\underline{\mathbf{I}})}_{\displaystyle\underline{\mathbf{E}}}\hat{\utilde{\mathbf{m}}}^r\]
+	\[\varepsilon_q=\frac{1}{2}\frac{(ds^r\hat{\utilde{\mathbf{m}}}^r\cdot\underline{\mathbf{F}}^{\text{T}}\underline{\mathbf{F}}d\utilde{\mathbf{x}}^r)-(ds^r\hat{\utilde{\mathbf{m}}}^r\cdot ds^r\hat{\utilde{\mathbf{m}}}^r)}{ds^r\hat{\utilde{\mathbf{m}}}^r\cdot ds^r\hat{\utilde{\mathbf{m}}}^r}\]
+	\[\varepsilon_q=\frac{1}{2}\frac{ds^r\hat{\utilde{\mathbf{m}}}^r\cdot(\underline{\mathbf{F}}^{\text{T}}\underline{\mathbf{F}}-\underline{\mathbf{I}})ds^r\hat{\utilde{\mathbf{m}}}^r}{ds^r\hat{\utilde{\mathbf{m}}}^r\cdot ds^r\hat{\utilde{\mathbf{m}}}^r}\]
+	\[\varepsilon_q=\frac{1}{2}[\hat{\utilde{\mathbf{m}}}^r\cdot(\underline{\mathbf{F}}^{\text{T}}\underline{\mathbf{F}}-\underline{\mathbf{I}})\hat{\utilde{\mathbf{m}}}^r]\]
+	\[\varepsilon_q=\hat{\utilde{\mathbf{m}}}^r\cdot\underbrace{\frac{1}{2}(\underline{\mathbf{F}}^{\text{T}}\underline{\mathbf{F}}-\underline{\mathbf{I}})}_{\displaystyle\underline{\mathbf{E}}}\hat{\utilde{\mathbf{m}}}^r\]
 	
-	\[\underline{\mathbf{E}}=\frac{1}{2}(\underline{\mathbf{F}}^T\underline{\mathbf{F}}-\underline{\mathbf{I}})\]
+	\[\underline{\mathbf{E}}=\frac{1}{2}(\underline{\mathbf{F}}^{\text{T}}\underline{\mathbf{F}}-\underline{\mathbf{I}})\]
 	\[\varepsilon_q(\hat{\utilde{\mathbf{m}}}^r)=\hat{\utilde{\mathbf{m}}}^r\cdot\underline{\mathbf{E}}\hat{\utilde{\mathbf{m}}}^r\]
 	
 	Onde $\underline{\mathbf{E}}$ é o Tensor das Deformações de Green-Lagrange e vale para qualquer magnitude de deslocamento. Algumas literaturas chamam de \textit{finite displacement} os deslocamentos de qualquer magnitude.
@@ -277,9 +277,9 @@
 	\[E_{ij}=\frac{1}{2}\left(\frac{\partial x^k}{\partial x^{ri}}\frac{\partial x^k}{\partial x^{rj}}-\delta_{ij}\right)\]
 	
 	Expressando os componentes de $\underline{\mathbf{E}}$ a partir do campo de deslocamentos:
-	\[\underline{\mathbf{E}}=\frac{1}{2}[(\nabla\utilde{\mathbf{u}}^T+\underline{\mathbf{I}})(\nabla\utilde{\mathbf{u}}+\underline{\mathbf{I}})-\underline{\mathbf{I}}]\]
-	\[\underline{\mathbf{E}}=\frac{1}{2}(\nabla\utilde{\mathbf{u}}^T\nabla\utilde{\mathbf{u}}+\nabla\utilde{\mathbf{u}}^T+\nabla\utilde{\mathbf{u}}+\underline{\mathbf{I}}-\underline{\mathbf{I}})\]
-	\[\underline{\mathbf{E}}=\frac{1}{2}(\nabla\utilde{\mathbf{u}}+\nabla\utilde{\mathbf{u}}^T+\nabla\utilde{\mathbf{u}}^T\nabla\utilde{\mathbf{u}})\]
+	\[\underline{\mathbf{E}}=\frac{1}{2}[(\nabla\utilde{\mathbf{u}}^{\text{T}}+\underline{\mathbf{I}})(\nabla\utilde{\mathbf{u}}+\underline{\mathbf{I}})-\underline{\mathbf{I}}]\]
+	\[\underline{\mathbf{E}}=\frac{1}{2}(\nabla\utilde{\mathbf{u}}^{\text{T}}\nabla\utilde{\mathbf{u}}+\nabla\utilde{\mathbf{u}}^{\text{T}}+\nabla\utilde{\mathbf{u}}+\underline{\mathbf{I}}-\underline{\mathbf{I}})\]
+	\[\underline{\mathbf{E}}=\frac{1}{2}(\nabla\utilde{\mathbf{u}}+\nabla\utilde{\mathbf{u}}^{\text{T}}+\nabla\utilde{\mathbf{u}}^{\text{T}}\nabla\utilde{\mathbf{u}})\]
 	
 	Na notação de Einstein:
 	\[E_{ij}=\frac{1}{2}\left(\frac{\partial u^i}{\partial x^{rj}}+\frac{\partial u^j}{\partial x^{ri}}+\underbrace{\frac{\partial u^k}{\partial x^{ri}}\frac{\partial u^k}{\partial x^{rj}}}_{*}\right)\]
@@ -348,19 +348,19 @@
 	\[||\underline{\mathbf{F}}d\utilde{\mathbf{b}}^r||=\sqrt{\underline{\mathbf{F}}d\utilde{\mathbf{b}}^r\cdot\underline{\mathbf{F}}d\utilde{\mathbf{b}}^r}\]
 	
 	Substituindo as 4 relações acima na Equação \eqref{eq-variacao-angulo-fibras},
-	\[\sin\gamma=\frac{d\utilde{\mathbf{b}}^r\cdot\underline{\mathbf{F}}^T\underline{\mathbf{F}}d\utilde{\mathbf{a}}^r}{\sqrt{d\utilde{\mathbf{a}}^r\cdot\underline{\mathbf{F}}^T\underline{\mathbf{F}}d\utilde{\mathbf{a}}^r}\sqrt{d\utilde{\mathbf{b}}^r\cdot\underline{\mathbf{F}}^T\underline{\mathbf{F}}d\utilde{\mathbf{b}}^r}}\]
+	\[\sin\gamma=\frac{d\utilde{\mathbf{b}}^r\cdot\underline{\mathbf{F}}^{\text{T}}\underline{\mathbf{F}}d\utilde{\mathbf{a}}^r}{\sqrt{d\utilde{\mathbf{a}}^r\cdot\underline{\mathbf{F}}^{\text{T}}\underline{\mathbf{F}}d\utilde{\mathbf{a}}^r}\sqrt{d\utilde{\mathbf{b}}^r\cdot\underline{\mathbf{F}}^{\text{T}}\underline{\mathbf{F}}d\utilde{\mathbf{b}}^r}}\]
 	
-	\[\sin\gamma=\frac{(d\mathbf{b}^r\hat{\utilde{\mathbf{b}}}^r)\cdot[\underline{\mathbf{F}}^T\underline{\mathbf{F}}(d\mathbf{a}^r\hat{\utilde{\mathbf{a}}}^r)]}{\sqrt{(d\mathbf{a}^r\hat{\utilde{\mathbf{a}}}^r)\cdot[\underline{\mathbf{F}}^T\underline{\mathbf{F}}(d\mathbf{a}^r\hat{\utilde{\mathbf{a}}}^r)]}\sqrt{(d\mathbf{b}^r\hat{\utilde{\mathbf{b}}}^r)\cdot[\underline{\mathbf{F}}^T\underline{\mathbf{F}}(d\mathbf{b}^r\hat{\utilde{\mathbf{b}}}^r)]}}\]
+	\[\sin\gamma=\frac{(d\mathbf{b}^r\hat{\utilde{\mathbf{b}}}^r)\cdot[\underline{\mathbf{F}}^{\text{T}}\underline{\mathbf{F}}(d\mathbf{a}^r\hat{\utilde{\mathbf{a}}}^r)]}{\sqrt{(d\mathbf{a}^r\hat{\utilde{\mathbf{a}}}^r)\cdot[\underline{\mathbf{F}}^{\text{T}}\underline{\mathbf{F}}(d\mathbf{a}^r\hat{\utilde{\mathbf{a}}}^r)]}\sqrt{(d\mathbf{b}^r\hat{\utilde{\mathbf{b}}}^r)\cdot[\underline{\mathbf{F}}^{\text{T}}\underline{\mathbf{F}}(d\mathbf{b}^r\hat{\utilde{\mathbf{b}}}^r)]}}\]
 	
-	\[\sin\gamma=\frac{(d\mathbf{b}^rd\mathbf{a}^r)[\hat{\utilde{\mathbf{b}}}^r\cdot\underline{\mathbf{F}}^T\underline{\mathbf{F}}\hat{\utilde{\mathbf{a}}}^r]}{(d\mathbf{b}^rd\mathbf{a}^r)\sqrt{\hat{\utilde{\mathbf{a}}}^r\cdot\underline{\mathbf{F}}^T\underline{\mathbf{F}}\hat{\utilde{\mathbf{a}}}^r}\sqrt{\hat{\utilde{\mathbf{b}}}^r\cdot\underline{\mathbf{F}}^T\underline{\mathbf{F}}\hat{\utilde{\mathbf{b}}}^r}}\]
+	\[\sin\gamma=\frac{(d\mathbf{b}^rd\mathbf{a}^r)[\hat{\utilde{\mathbf{b}}}^r\cdot\underline{\mathbf{F}}^{\text{T}}\underline{\mathbf{F}}\hat{\utilde{\mathbf{a}}}^r]}{(d\mathbf{b}^rd\mathbf{a}^r)\sqrt{\hat{\utilde{\mathbf{a}}}^r\cdot\underline{\mathbf{F}}^{\text{T}}\underline{\mathbf{F}}\hat{\utilde{\mathbf{a}}}^r}\sqrt{\hat{\utilde{\mathbf{b}}}^r\cdot\underline{\mathbf{F}}^{\text{T}}\underline{\mathbf{F}}\hat{\utilde{\mathbf{b}}}^r}}\]
 	
 	\begin{equation}\label{eq-distorcao-fibra-1}
-		\sin\gamma=\frac{\hat{\utilde{\mathbf{b}}}^r\cdot\underline{\mathbf{F}}^T\underline{\mathbf{F}}\hat{\utilde{\mathbf{a}}}^r}{\sqrt{\hat{\utilde{\mathbf{a}}}^r\cdot\underline{\mathbf{F}}^T\underline{\mathbf{F}}\hat{\utilde{\mathbf{a}}}^r}\sqrt{\hat{\utilde{\mathbf{b}}}^r\cdot\underline{\mathbf{F}}^T\underline{\mathbf{F}}\hat{\utilde{\mathbf{b}}}^r}}
+		\sin\gamma=\frac{\hat{\utilde{\mathbf{b}}}^r\cdot\underline{\mathbf{F}}^{\text{T}}\underline{\mathbf{F}}\hat{\utilde{\mathbf{a}}}^r}{\sqrt{\hat{\utilde{\mathbf{a}}}^r\cdot\underline{\mathbf{F}}^{\text{T}}\underline{\mathbf{F}}\hat{\utilde{\mathbf{a}}}^r}\sqrt{\hat{\utilde{\mathbf{b}}}^r\cdot\underline{\mathbf{F}}^{\text{T}}\underline{\mathbf{F}}\hat{\utilde{\mathbf{b}}}^r}}
 	\end{equation}		
 
 	Lembrando que,
-	\[\underline{\mathbf{E}}=\frac{1}{2}(\underline{\mathbf{F}}^T\underline{\mathbf{F}}-\underline{\mathbf{I}})\]
-	\[\underline{\mathbf{F}}^T\underline{\mathbf{F}}=2\underline{\mathbf{E}}+\underline{\mathbf{I}}\]
+	\[\underline{\mathbf{E}}=\frac{1}{2}(\underline{\mathbf{F}}^{\text{T}}\underline{\mathbf{F}}-\underline{\mathbf{I}})\]
+	\[\underline{\mathbf{F}}^{\text{T}}\underline{\mathbf{F}}=2\underline{\mathbf{E}}+\underline{\mathbf{I}}\]
 	
 	Substituindo a expressão acima na Equação \eqref{eq-distorcao-fibra-1},
 	\[\sin\gamma=\frac{\hat{\utilde{\mathbf{b}}}^r\cdot(2\underline{\mathbf{E}}+\underline{\mathbf{I}})\hat{\utilde{\mathbf{a}}}^r}{\sqrt{\hat{\utilde{\mathbf{a}}}^r\cdot(2\underline{\mathbf{E}}+\underline{\mathbf{I}})\hat{\utilde{\mathbf{a}}}^r}\sqrt{\hat{\utilde{\mathbf{b}}}^r\cdot(2\underline{\mathbf{E}}+\underline{\mathbf{I}})\hat{\utilde{\mathbf{b}}}^r}}\]
@@ -499,3 +499,236 @@
 	
 	Pode-se reescrever a Equação \eqref{eq-distorcao-fibra-3} como,
 	\[\sin\gamma(\utilde{\mathbf{\hat{e}_1}},\utilde{\mathbf{\hat{e}_2}})=\frac{2E_{21}}{\displaystyle\sqrt{2E_{11}+1}\sqrt{2E_{22}+1}}\]
+	
+	\subsection{Tensor das Deformações de Cauchy-Green (da direita)}
+	
+	O Tensor das Deformações de Cauchy-Green ($\underline{\mathbf{C}}$) serve para grandes deformações e é definido como,
+	\begin{equation}\label{eq-def-cauchy-green}
+		\underline{\mathbf{C}}=\underline{\mathbf{F}}^{\text{T}}\underline{\mathbf{F}}
+	\end{equation}
+	
+	Podendo ser reescrito na notação de Einstein como,
+	\[C_{ij}=F_{ik}^{\text{T}}F_{kj}\]
+	\[C_{ij}=F_{ki}F_{kj}\]
+	
+	Na forma diferencial,
+	\[C_{ij}=\frac{\partial \utilde{\mathbf{x}}^k}{\partial x^{ri}}\frac{\partial \utilde{\mathbf{x}}^k}{\partial x^{rj}}\]
+	
+	\subsubsection{Relações entre alongamentos quadráticos e lineares}
+	
+	O alongamento quadrático,
+	\[\lambda=\sqrt{2\varepsilon_q+1}\]
+	
+	Elevando ambos os lados ao quadrado,
+	\[\lambda^2=2\varepsilon_q+1=2(\hat{\utilde{\mathbf{m}}}^r\cdot\underline{\mathbf{E}}\hat{\utilde{\mathbf{m}}}^r)+1\]
+	
+	Como $\underline{\mathbf{C}}=\underline{\mathbf{F}}^{\text{T}}\underline{\mathbf{F}}$, $\underline{\mathbf{E}}$ pode ser reescrito como,
+	\begin{equation}\label{eq-green-lagrange-em-funcao-de-cauchy-green}
+		\underline{\mathbf{E}}=\frac{1}{2}(\underline{\mathbf{C}}-\underline{\mathbf{I}})
+	\end{equation}
+	
+	Pode-se reescrever $\lambda^2$ como,
+	\[\lambda^2=2\left\{\hat{\utilde{\mathbf{m}}}^r\cdot\left[\frac{1}{2}(\underline{\mathbf{C}}-\underline{\mathbf{I}})\right]\hat{\utilde{\mathbf{m}}}^r\right\}+1\]
+	\[\lambda^2=\hat{\utilde{\mathbf{m}}}^r\cdot\underline{\mathbf{C}}\hat{\utilde{\mathbf{m}}}^r-\hat{\utilde{\mathbf{m}}}^r\cdot\underline{\mathbf{I}}\hat{\utilde{\mathbf{m}}}^r+1\]
+	\[\lambda^2=\hat{\utilde{\mathbf{m}}}^r\cdot\underline{\mathbf{C}}\hat{\utilde{\mathbf{m}}}^r-\underbrace{\hat{\utilde{\mathbf{m}}}^r\cdot\hat{\utilde{\mathbf{m}}}^r}_{\displaystyle1}+1\]
+	\[\lambda^2=\hat{\utilde{\mathbf{m}}}^r\cdot\underline{\mathbf{C}}\hat{\utilde{\mathbf{m}}}^r\]
+	
+	Logo,
+	\begin{equation}
+		\lambda(\hat{\utilde{\mathbf{m}}}^r)=\sqrt{\hat{\utilde{\mathbf{m}}}^r\cdot\underline{\mathbf{C}}\hat{\utilde{\mathbf{m}}}^r}
+	\end{equation}
+	
+	Para o alongamento linear,
+	\[\varepsilon_l(\hat{\utilde{\mathbf{m}}}^r)=\lambda-1\]
+	\begin{equation}
+		\varepsilon_l(\hat{\utilde{\mathbf{m}}}^r)=\sqrt{\hat{\utilde{\mathbf{m}}}^r\cdot\underline{\mathbf{C}}\hat{\utilde{\mathbf{m}}}^r}-1
+	\end{equation}
+	
+	Para a distorção, a partir da Equação \eqref{eq-distorcao-fibra-1},
+	\[\sin\gamma=\frac{\hat{\utilde{\mathbf{b}}}^r\cdot\underline{\mathbf{F}}^{\text{T}}\underline{\mathbf{F}}\hat{\utilde{\mathbf{a}}}^r}{\sqrt{\hat{\utilde{\mathbf{a}}}^r\cdot\underline{\mathbf{F}}^{\text{T}}\underline{\mathbf{F}}\hat{\utilde{\mathbf{a}}}^r}\sqrt{\hat{\utilde{\mathbf{b}}}^r\cdot\underline{\mathbf{F}}^{\text{T}}\underline{\mathbf{F}}\hat{\utilde{\mathbf{b}}}^r}}\]
+	
+	Como $\underline{\mathbf{F}}^{\text{T}}\underline{\mathbf{F}}=\underline{\mathbf{C}}$,
+	\[\sin\gamma=\frac{\hat{\utilde{\mathbf{b}}}^r\cdot\underline{\mathbf{C}}\hat{\utilde{\mathbf{a}}}^r}{\sqrt{\hat{\utilde{\mathbf{a}}}^r\cdot\underline{\mathbf{C}}\hat{\utilde{\mathbf{a}}}^r}\sqrt{\hat{\utilde{\mathbf{b}}}^r\cdot\underline{\mathbf{C}}\hat{\utilde{\mathbf{b}}}^r}}\]
+	\[\sin\gamma=\frac{\hat{\utilde{\mathbf{b}}}^r\cdot\underline{\mathbf{C}}\hat{\utilde{\mathbf{a}}}^r}{\lambda(\hat{\utilde{\mathbf{a}}}^r)\lambda(\hat{\utilde{\mathbf{b}}}^r)}\]
+	
+	Ou seja, pode-se concluir que $\underline{\mathbf{C}}$ é simétrico.
+	
+	\subsubsection{Interpretação de $\underline{\mathbf{C}}$ na base ortonormal}
+	\[\lambda(\utilde{\mathbf{\hat{e}_1}})=\sqrt{\utilde{\mathbf{\hat{e}_1}}\cdot\underline{\mathbf{C}}\utilde{\mathbf{\hat{e}_1}}}=\sqrt{C_{11}}\therefore\lambda^2(\utilde{\mathbf{\hat{e}_1}})=C_{11}\]
+	\[\lambda(\utilde{\mathbf{\hat{e}_2}})=\sqrt{\utilde{\mathbf{\hat{e}_2}}\cdot\underline{\mathbf{C}}\utilde{\mathbf{\hat{e}_2}}}=\sqrt{C_{22}}\therefore\lambda^2(\utilde{\mathbf{\hat{e}_2}})=C_{22}\]
+	\[\lambda(\utilde{\mathbf{\hat{e}_3}})=\sqrt{\utilde{\mathbf{\hat{e}_3}}\cdot\underline{\mathbf{C}}\utilde{\mathbf{\hat{e}_3}}}=\sqrt{C_{33}}\therefore\lambda^2(\utilde{\mathbf{\hat{e}_3}})=C_{33}\]
+	
+	Ou seja, a diagonal de $\underline{\mathbf{C}}$ guarda o alongamento quadrático.
+	
+	\[\sin(\utilde{\mathbf{\hat{e}_1}},\utilde{\mathbf{\hat{e}_2}})=\frac{\utilde{\mathbf{\hat{e}_1}}\cdot\underline{\mathbf{C}}\utilde{\mathbf{\hat{e}_2}}}{\lambda(\utilde{\mathbf{\hat{e}_1}})\lambda(\utilde{\mathbf{\hat{e}_2}})}=\frac{C_{12}}{\lambda(\utilde{\mathbf{\hat{e}_1}})\lambda(\utilde{\mathbf{\hat{e}_2}})}\]
+	
+	\subsection{Deslocamentos infinitesimais}
+	
+	Relembrando de $\underline{\mathbf{E}}$ na forma diferencial,
+	\[\underline{\mathbf{E}}=\frac{1}{2}\left( \frac{\partial u^i}{\partial x^{rj}}+\frac{\partial u^j}{\partial x^{ri}}+\frac{\partial u^k}{\partial x^{ri}}\frac{\partial u^k}{\partial x^{rj}} \right)\]
+	
+	Para deslocamentos infinitesimais, pode-se desprezar o produto contido na expressão acima. Ficando como,
+	\[E_{ij}^l=\frac{1}{2}\left( \frac{\partial u^i}{\partial x^{rj}}+\frac{\partial u^j}{\partial x^{ri}}\right)\]
+	
+	Ou seja, obtém-se o Tensor das Deformações infinitesimais linearizado, denotado por $\underline{\mathbf{E}}^l$ ou $E_{ij}^l$. Sendo,
+	\[\underline{\mathbf{E}}^l=\frac{1}{2}(\nabla u^{\text{T}}+\nabla u)\]
+	
+	Agora, lembrando do alongamento linear em função do vetor unitário $\hat{\utilde{\mathbf{m}}}^r$ (direção de uma fibra na configuração de referência),
+	\[\varepsilon_l(\hat{\utilde{\mathbf{m}}}^r)=\sqrt{1+2(\hat{\utilde{\mathbf{m}}}^r\cdot\underline{\mathbf{E}}\hat{\utilde{\mathbf{m}}}^r)}-1\]
+	
+	Elevando ambos os lados ao quadrado,
+	\[(\varepsilon_l+1)^2=1+2(\hat{\utilde{\mathbf{m}}}^r\cdot\underline{\mathbf{E}}\hat{\utilde{\mathbf{m}}}^r)\]
+	\[\varepsilon_l^2+2\varepsilon_l+1=1+2(\hat{\utilde{\mathbf{m}}}^r\cdot\underline{\mathbf{E}}\hat{\utilde{\mathbf{m}}}^r)\]
+	
+	Desprezando a ordem superior,
+	\[\varepsilon_l=\hat{\utilde{\mathbf{m}}}^r\cdot\underline{\mathbf{E}}\hat{\utilde{\mathbf{m}}}^r\]
+	
+	Ou seja, $\underline{\mathbf{E}}$ tende para $\underline{\mathbf{E}}^l$ para deslocamentos lineares, portanto,
+	\[\varepsilon_l(\hat{\utilde{\mathbf{m}}}^r)=\hat{\utilde{\mathbf{m}}}^r\cdot\underline{\mathbf{E}}^l\hat{\utilde{\mathbf{m}}}^r\]
+	
+	E para a distorção,
+	\[\sin\gamma(\hat{\utilde{\mathbf{a}}}^r, \hat{\utilde{\mathbf{b}}}^r)=\frac{2(\hat{\utilde{\mathbf{b}}}^r\cdot\underline{\mathbf{E}}\hat{\utilde{\mathbf{a}}}^r)}{\sqrt{2(\hat{\utilde{\mathbf{a}}}^r\cdot\underline{\mathbf{E}}\hat{\utilde{\mathbf{a}}}^r)+1}\sqrt{2(\hat{\utilde{\mathbf{b}}}^r\cdot\underline{\mathbf{E}}\hat{\utilde{\mathbf{b}}}^r)+1}}\]
+	
+	Admitindo que o denominador acima será muito pequeno em relação a $1$,
+	\[\sin\gamma(\hat{\utilde{\mathbf{a}}}^r, \hat{\utilde{\mathbf{b}}}^r)=2(\hat{\utilde{\mathbf{b}}}^r\cdot\underline{\mathbf{E}}^l\hat{\utilde{\mathbf{a}}}^r)\]
+	
+	\textbf{Exercício} - Capítulo 3/página 108 do livro \textit{The Mechanics of Solids and Structures - Hierarchical Modeling and The Finite Element Process of Solution (Bucalem, Bathe):}
+	
+	Configuração deformada para um bloco de aresta $a$,
+	\[
+	\begin{cases}
+		x^1=x^{r1}+\tan\beta x^{r2} \\ x^2=x^{r2} \\ x^3=x^{r3}
+	\end{cases}
+	\]
+	
+	//Inserir desenho
+	
+	\begin{enumerate}
+		\item Calcular o campo de deslocamentos e deformações normais ($\varepsilon_l$) nas direções ($\utilde{\mathbf{\hat{e}_1}}$), ($\utilde{\mathbf{\hat{e}_2}}$), ($\utilde{\mathbf{m_1}}=\frac{\sqrt{2}}{2}\utilde{\mathbf{\hat{e}_1}}+\frac{\sqrt{2}}{2}\utilde{\mathbf{\hat{e}_2}}$) e ($\utilde{\mathbf{m_2}}=-\frac{\sqrt{2}}{2}\utilde{\mathbf{\hat{e}_1}}+\frac{\sqrt{2}}{2}\utilde{\mathbf{\hat{e}_2}}$).
+	\item Calcular as deformações por cisalhamento para os pares de fibras nas direções ($\utilde{\mathbf{\hat{e}_1}}$, $\utilde{\mathbf{\hat{e}_2}}$) e ($\utilde{\mathbf{m_1}}$, $\utilde{\mathbf{m_2}}$).
+	\item Repetir os itens 1 e 2 assumindo um $\beta$ pequeno, obter os resultados usando a teoria dos pequenos deslocamentos, e mostrar que estes mesmos resultados são também obtidos de 1 e 2.
+	\end{enumerate}
+	
+	\subsection{Movimentos rígidos: Rotações}
+	
+	//Inserir imagem
+	
+	Para a figura acima em uma base ortonormal e o eixo de rotação $\utilde{\mathbf{\hat{e}}}=\utilde{\mathbf{\hat{e}_3}}$, $\theta$ é a magnitude de rotação, $\utilde{\theta}=\theta\utilde{\mathbf{\hat{e}}}$ ($\utilde{\theta}$ define totalmente a rotação) e $||\utilde{\mathbf{\hat{e}}}||=1$.
+	
+	Lembrando do exercício de rotação da primeira aula,
+	\[
+		\underbrace{\begin{Bmatrix}
+			x^1 \\ x^2 \\ x^3
+		\end{Bmatrix}}_{\displaystyle\utilde{\mathbf{x}}}
+		=
+		\underbrace{
+		\begin{bmatrix}
+			\cos\varphi & -\sin\varphi & 0 \\
+			\sin\varphi & \cos\varphi & 0 \\
+			0 & 0 & 1
+		\end{bmatrix}}_{\displaystyle\underline{\mathbf{Q}}}
+		\underbrace{
+		\begin{Bmatrix}
+			x^{r1} \\ x^{r2} \\ x^{r3}
+		\end{Bmatrix}}_{\displaystyle\utilde{\mathbf{x}}^r}		
+	\]
+	
+	Onde $\underline{\mathbf{Q}}$ é o operador (tensor) ortogonal.
+	
+	Pode-se definir um operador ortogonal de forma equivalente por uma das relações abaixo,
+	\begin{itemize}
+		\item $||\underline{\mathbf{Q}}\utilde{\mathbf{w}}||=||\utilde{\mathbf{w}}||\;\forall\;\utilde{\mathbf{w}}$ (Não muda o comprimento).
+		\item $\underline{\mathbf{Q}}\underline{\mathbf{Q}}^{\text{T}}=\underline{\mathbf{Q}}^{\text{T}}\underline{\mathbf{Q}}=\underline{\mathbf{I}}\implies\underline{\mathbf{Q}}^{-1}=\underline{\mathbf{Q}}^{\text{T}}$
+		\item A partir de item acima,
+		\[\det(\underline{\mathbf{Q}}\underline{\mathbf{Q}}^{\text{T}})=\det(\underline{\mathbf{I}})\]
+		\[\det(\underline{\mathbf{Q}})\det(\underline{\mathbf{Q}}^{\text{T}})=1\]
+		\[(\det\underline{\mathbf{Q}})^2=1\]
+		\[\det(\underline{\mathbf{Q}})=\pm1\]
+	\end{itemize}
+	
+	Pode-se demonstrar que para qualquer tensor ortogonal com determinante positivo ($\det(\underline{\mathbf{Q}})=1$), a rotação é descrita através da equação,
+	\[\utilde{\mathbf{x}}=\underline{\mathbf{Q}}\utilde{\mathbf{x}}^r\]
+	
+	\textbf{Exercício} - Capítulo 3/página 144 do livro \textit{The Mechanics of Solids and Structures - Hierarchical Modeling and The Finite Element Process of Solution (Bucalem, Bathe):}
+	
+	Considere o tensor $\underline{\mathbf{Q}}$ na base ortogonal,
+	\[
+		\underline{\mathbf{Q}}
+		=
+		\begin{bmatrix}
+			\frac{4}{9}+\frac{5\sqrt{3}}{18} & \frac{5}{18}+\frac{2\sqrt{3}}{9} & \frac{5}{9}-\frac{\sqrt{3}}{9} \\
+			\frac{11}{18}-\frac{2\sqrt{3}}{9} & \frac{4}{9}+\frac{5\sqrt{3}}{18} & -\frac{1}{9}-\frac{\sqrt{3}}{9} \\
+			-\frac{1}{9}-\frac{\sqrt{3}}{9} & \frac{5}{9}-\frac{\sqrt{3}}{9} & \frac{1}{9}+\frac{4\sqrt{3}}{9}
+		\end{bmatrix}
+	\]
+	
+	\begin{enumerate}
+		\item Verificar se $\underline{\mathbf{Q}}$ é um tensor ortogonal;
+		\item Obter o eixo e magnitude dada por $\underline{\mathbf{Q}}$.
+	\end{enumerate}
+	
+	Solução:
+	
+	\begin{enumerate}
+		\item Deve-se verificar se $\underline{\mathbf{Q}}\underline{\mathbf{Q}}^{\text{T}}=1$
+		\item Considerando que $\utilde{\mathbf{\hat{e}}}$ é um vetor unitário ($||\utilde{\mathbf{\hat{e}}}||=1$) na direção do eixo de rotação, então:
+		\[\underline{\mathbf{Q}}\utilde{\mathbf{\hat{e}}}=\utilde{\mathbf{\hat{e}}}\;\text{ (Não muda a magnitude)}\]
+		\[\underline{\mathbf{Q}}\utilde{\mathbf{\hat{e}}}-\utilde{\mathbf{\hat{e}}}=0\]
+		\[(\underline{\mathbf{Q}}-\underline{\mathbf{I}})\utilde{\mathbf{\hat{e}}}=0\]
+		
+		Na forma matricial,
+		\[
+			\begin{bmatrix}
+				Q_{11}-1 & Q_{12} & Q_{13} \\
+				Q_{21} & Q_{22}-1 & Q_{23} \\
+				Q_{31} & Q_{32} & Q_{33}-1
+			\end{bmatrix}
+			\begin{Bmatrix}
+				e_1 \\ e_2 \\ e_3
+			\end{Bmatrix}
+			=
+			\begin{Bmatrix}
+				0 \\ 0 \\ 0
+			\end{Bmatrix}
+		\]
+		
+		Resolvendo o sistema
+		\[
+			\utilde{\mathbf{\hat{e}}}
+			=
+			\begin{Bmatrix}
+				2/3 \\ 2/3 \\ 1/3
+			\end{Bmatrix}
+		\]
+		
+		Verificando se não houve falha no processo de cálculo,
+		\[||\utilde{\mathbf{\hat{e}}}||=\sqrt{(2/3)^2+(2/3)^2+(1/3)^2}=1\]
+		
+		Adotando $\utilde{\mathbf{g}}$ como um vetor unitário ortogonal ao eixo de rotação e escolhendo qualquer um dos vetores da base,
+		\[
+			\utilde{\mathbf{g}}
+			=
+			\frac{\utilde{\mathbf{\hat{e}}}\times\utilde{\mathbf{\hat{e}_2}}}{||\utilde{\mathbf{\hat{e}}}\times\utilde{\mathbf{\hat{e}_2}}||}
+			=
+			\begin{Bmatrix}
+				-\sqrt{5}/5 \\ 0 \\ \frac{2\sqrt{5}}{5}
+			\end{Bmatrix}
+		\]
+		
+		Aplicando a rotação em $\utilde{\mathbf{g}}$ para obter um vetor $\utilde{\mathbf{f}}$,
+		\[
+			\utilde{\mathbf{f}}
+			=
+			\underline{\mathbf{Q}}\utilde{\mathbf{g}}
+			=
+			\begin{Bmatrix}
+				-\frac{\sqrt{15}}{10}+\frac{2\sqrt{5}}{15} \\ -\frac{5}{6} \\ \frac{\sqrt{15}}{5}+\frac{\sqrt{5}}{15}
+			\end{Bmatrix}
+		\]
+		
+		Encontrando o ângulo de rotação pelo produto escalar entre $\utilde{\mathbf{g}}$ e $\utilde{\mathbf{f}}$,
+		\[\utilde{\mathbf{g}}\cdot\utilde{\mathbf{f}}=||\utilde{\mathbf{g}}||\;||\utilde{\mathbf{f}}||\cos\theta\]
+		\[\cos\theta=\frac{\sqrt{3}}{2}\therefore\theta=\text{30\textdegree}\]
+		
+	\end{enumerate}
+	
