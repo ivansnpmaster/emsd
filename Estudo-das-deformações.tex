@@ -540,7 +540,7 @@
 	
 	Para o alongamento linear,
 	\[\varepsilon_l(\hat{\utilde{\mathbf{m}}}^r)=\lambda-1\]
-	\begin{equation}
+	\begin{equation}\label{eq-alongamento-linear-1}
 		\varepsilon_l(\hat{\utilde{\mathbf{m}}}^r)=\sqrt{\hat{\utilde{\mathbf{m}}}^r\cdot\underline{\mathbf{C}}\hat{\utilde{\mathbf{m}}}^r}-1
 	\end{equation}
 	
@@ -607,6 +607,202 @@
 		\item Calcular o campo de deslocamentos e deformações normais ($\varepsilon_l$) nas direções ($\utilde{\mathbf{\hat{e}_1}}$), ($\utilde{\mathbf{\hat{e}_2}}$), ($\utilde{\mathbf{m_1}}=\frac{\sqrt{2}}{2}\utilde{\mathbf{\hat{e}_1}}+\frac{\sqrt{2}}{2}\utilde{\mathbf{\hat{e}_2}}$) e ($\utilde{\mathbf{m_2}}=-\frac{\sqrt{2}}{2}\utilde{\mathbf{\hat{e}_1}}+\frac{\sqrt{2}}{2}\utilde{\mathbf{\hat{e}_2}}$).
 	\item Calcular as deformações por cisalhamento para os pares de fibras nas direções ($\utilde{\mathbf{\hat{e}_1}}$, $\utilde{\mathbf{\hat{e}_2}}$) e ($\utilde{\mathbf{m_1}}$, $\utilde{\mathbf{m_2}}$).
 	\item Repetir os itens 1 e 2 assumindo um $\beta$ pequeno, obter os resultados usando a teoria dos pequenos deslocamentos, e mostrar que estes mesmos resultados são também obtidos de 1 e 2.
+	\end{enumerate}
+	
+	\textbf{Solução}:
+	
+	\begin{enumerate}
+		\item 
+
+		O campo de deslocamentos é dado por,
+		\[u^i=x^i-x^{ri}\]
+	
+		Aplicando para as coordenadas,
+		\[u^1=x^1-x^{r1}=(x^{r1}+\tan\beta x^{r2})-x^{r1}=\tan\beta x^{r2}\]
+		\[u^2=x^2-x^{r2}=x^{r2}-x^{r2}=0\]
+		\[u^3=x^2-x^{r2}=x^{r3}-x^{r3}=0\]
+	
+		Considerando grandes deslocamentos, precisamos calcular o gradiente das deformações ($\underline{\mathbf{F}}$)
+		\[
+			\underline{\mathbf{F}}
+			=
+			\begin{bmatrix}
+				1 & \tan\beta & 0 \\
+				0 & 1 & 0 \\
+				0 & 0 & 1
+			\end{bmatrix}			
+		\]
+		Nota-se aqui que através do bloco, os elementos de F são constantes (independentes de $x^{r1}$, $x^{r2}$ e $x^{r3}$).
+	
+		Então,
+		\[
+			\underline{\mathbf{F}}^{\text{T}}\underline{\mathbf{F}}
+			=
+			\begin{bmatrix}
+				1 & 0 & 0 \\
+				\tan\beta & 1 & 0 \\
+				0 & 0 & 1
+			\end{bmatrix}
+			\begin{bmatrix}
+				1 & \tan\beta & 0 \\
+				0 & 1 & 0 \\
+				0 & 0 & 1
+			\end{bmatrix}
+			=
+			\begin{bmatrix}
+				1 & \tan\beta & 0 \\
+				\tan\beta & \tan^2\beta + 1 & 0 \\
+				0 & 0 & 1
+			\end{bmatrix}
+		\]
+	
+		Usando a Equação \eqref{eq-alongamento-linear-1} (alongamento linear) para as fibras do item 1:
+	
+		Para $\utilde{\mathbf{\hat{e}_1}}$,
+		\[\varepsilon_l(\utilde{\mathbf{\hat{e}_1}})=\sqrt{\utilde{\mathbf{\hat{e}_1}}\cdot\underline{\mathbf{C}}\utilde{\mathbf{\hat{e}_1}}}-1\]
+		\[
+			\utilde{\mathbf{\hat{e}_1}}\cdot\underline{\mathbf{C}}\utilde{\mathbf{\hat{e}_1}}
+			=
+			\begin{Bmatrix}
+				1 & 0 & 0
+			\end{Bmatrix}
+			\cdot
+			\begin{bmatrix}
+				1 & \tan\beta & 0 \\
+				\tan\beta & \tan^2\beta + 1 & 0 \\
+				0 & 0 & 1
+			\end{bmatrix}
+			\begin{Bmatrix}
+				1 \\ 0 \\ 0
+			\end{Bmatrix}
+		\]
+		\[
+			\utilde{\mathbf{\hat{e}_1}}\cdot\underline{\mathbf{C}}\utilde{\mathbf{\hat{e}_1}}
+			=
+			\begin{Bmatrix}
+				1 & 0 & 0
+			\end{Bmatrix}
+			\cdot
+			\begin{Bmatrix}
+				1 \\ \tan\beta \\ 0
+			\end{Bmatrix}
+			=
+			1
+		\]
+		\[\varepsilon_l(\utilde{\mathbf{\hat{e}_1}})=\sqrt{1}-1=0\]
+	
+		Para $\utilde{\mathbf{\hat{e}_2}}$,
+		\[\varepsilon_l(\utilde{\mathbf{\hat{e}_2}})=\sqrt{\utilde{\mathbf{\hat{e}_2}}\cdot\underline{\mathbf{C}}\utilde{\mathbf{\hat{e}_2}}}-1\]
+		\[
+			\utilde{\mathbf{\hat{e}_2}}\cdot\underline{\mathbf{C}}\utilde{\mathbf{\hat{e}_2}}
+			=
+			\begin{Bmatrix}
+				0 & 1 & 0
+			\end{Bmatrix}
+			\cdot
+			\begin{bmatrix}
+				1 & \tan\beta & 0 \\
+				\tan\beta & \tan^2\beta + 1 & 0 \\
+				0 & 0 & 1
+			\end{bmatrix}
+			\begin{Bmatrix}
+				0 \\ 1 \\ 0
+			\end{Bmatrix}
+		\]
+		\[
+			\utilde{\mathbf{\hat{e}_2}}\cdot\underline{\mathbf{C}}\utilde{\mathbf{\hat{e}_2}}
+			=
+			\begin{Bmatrix}
+				0 & 1 & 0
+			\end{Bmatrix}
+			\cdot
+			\begin{Bmatrix}
+				\tan\beta \\ \tan^2\beta + 1 \\ 0
+			\end{Bmatrix}
+			=
+			\tan^2\beta + 1
+		\]
+		\[\varepsilon_l(\utilde{\mathbf{\hat{e}_2}})=\sqrt{\tan^2\beta + 1}-1\]
+	
+		Para $\utilde{\mathbf{m_1}}$ (sendo $\utilde{\mathbf{m_1}}$ unitário, obrigatoriamente),
+		\[\varepsilon_l(\utilde{\mathbf{m_1}})=\sqrt{\utilde{\mathbf{m_1}}\cdot\underline{\mathbf{C}}\utilde{\mathbf{m_1}}}-1\]
+		\[
+			\utilde{\mathbf{m_1}}\cdot\underline{\mathbf{C}}\utilde{\mathbf{m_1}}
+			=
+			\begin{Bmatrix}
+				\frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2} & 0
+			\end{Bmatrix}
+			\cdot
+			\begin{bmatrix}
+				1 & \tan\beta & 0 \\
+				\tan\beta & \tan^2\beta + 1 & 0 \\
+				0 & 0 & 1
+			\end{bmatrix}
+			\begin{Bmatrix}
+				\frac{\sqrt{2}}{2} \\ \frac{\sqrt{2}}{2} \\ 0
+			\end{Bmatrix}
+		\]
+		\[
+			\utilde{\mathbf{m_1}}\cdot\underline{\mathbf{C}}\utilde{\mathbf{m_1}}
+			=
+			\begin{Bmatrix}
+				\frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2} & 0
+			\end{Bmatrix}
+			\cdot
+			\begin{Bmatrix}
+				\frac{\sqrt{2}}{2}(\tan\beta+1) \\ \frac{\sqrt{2}}{2}(\tan^2\beta+1+\tan\beta) \\ 0
+			\end{Bmatrix}
+		\]
+		\[\utilde{\mathbf{m_1}}\cdot\underline{\mathbf{C}}\utilde{\mathbf{m_1}}=\frac{1}{2}(\tan\beta+1)+\frac{1}{2}(\tan^2\beta+1+\tan\beta)\]
+		\[\utilde{\mathbf{m_1}}\cdot\underline{\mathbf{C}}\utilde{\mathbf{m_1}}=\tan\beta+1+\frac{\tan^2\beta}{2}\]
+		\[\varepsilon_l(\utilde{\mathbf{m_1}})=\sqrt{\tan\beta+1+\frac{\tan^2\beta}{2}}-1\]
+	
+		Para $\utilde{\mathbf{m_2}}$ (sendo $\utilde{\mathbf{m_2}}$ unitário, obrigatoriamente),
+		\[\varepsilon_l(\utilde{\mathbf{m_2}})=\sqrt{\utilde{\mathbf{m_2}}\cdot\underline{\mathbf{C}}\utilde{\mathbf{m_2}}}-1\]
+		\[
+			\utilde{\mathbf{m_2}}\cdot\underline{\mathbf{C}}\utilde{\mathbf{m_2}}
+			=
+			\begin{Bmatrix}
+				-\frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2} & 0
+			\end{Bmatrix}
+			\cdot
+			\begin{bmatrix}
+				1 & \tan\beta & 0 \\
+				\tan\beta & \tan^2\beta + 1 & 0 \\
+				0 & 0 & 1
+			\end{bmatrix}
+			\begin{Bmatrix}
+				-\frac{\sqrt{2}}{2} \\ \frac{\sqrt{2}}{2} \\ 0
+			\end{Bmatrix}
+		\]
+		\[
+			\utilde{\mathbf{m_2}}\cdot\underline{\mathbf{C}}\utilde{\mathbf{m_2}}
+			=
+			\begin{Bmatrix}
+				-\frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2} & 0
+			\end{Bmatrix}
+			\cdot
+			\begin{Bmatrix}
+				\frac{\sqrt{2}}{2}(\tan\beta-1) \\ \frac{\sqrt{2}}{2}(\tan^2\beta+1-\tan\beta) \\ 0
+			\end{Bmatrix}
+		\]
+		\[\utilde{\mathbf{m_2}}\cdot\underline{\mathbf{C}}\utilde{\mathbf{m_2}}=-\frac{1}{2}(\tan\beta-1)+\frac{1}{2}(\tan^2\beta+1-\tan\beta)\]
+		\[\utilde{\mathbf{m_2}}\cdot\underline{\mathbf{C}}\utilde{\mathbf{m_2}}=-\tan\beta+1+\frac{\tan^2\beta}{2}\]
+		\[\varepsilon_l(\utilde{\mathbf{m_2}})=\sqrt{1+\frac{\tan^2\beta}{2}-\tan\beta}-1\]
+	
+		\item As tensões de cisalhamento podem ser calculadas como segue,
+		
+		Sabendo que,
+		\[\varepsilon_l(\hat{\utilde{\mathbf{m}}}^r)=\sqrt{\hat{\utilde{\mathbf{m}}}^r\cdot\underline{\mathbf{C}}\hat{\utilde{\mathbf{m}}}^r}-1\]
+		\[1+\varepsilon_l(\hat{\utilde{\mathbf{m}}}^r)=\sqrt{\hat{\utilde{\mathbf{m}}}^r\cdot\underline{\mathbf{C}}\hat{\utilde{\mathbf{m}}}^r}\]
+		
+		Substituindo na Equação \eqref{eq-distorcao-fibra-1},
+		\[
+		\sin\gamma=\frac{\hat{\utilde{\mathbf{b}}}^r\cdot\underline{\mathbf{C}}\hat{\utilde{\mathbf{a}}}^r}{\sqrt{1+\varepsilon_l(\hat{\utilde{\mathbf{a}}}^r)}\sqrt{1+\varepsilon_l(\hat{\utilde{\mathbf{b}}}^r)}}		
+		\]
+		
+		Para o par de fibras ($\utilde{\mathbf{\hat{e}_1}}$, $\utilde{\mathbf{\hat{e}_2}}$),
+		
 	\end{enumerate}
 	
 	\subsection{Movimentos rígidos: Rotações}
