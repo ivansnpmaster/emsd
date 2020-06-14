@@ -1,0 +1,124 @@
+//Inserir imagem
+	
+O assunto agora são fibras; como as fibras sofrem deformação. Seja $d\vt{x}^r$ o vetor infinitesimal que representa uma fibra a partir do ponto $\vt{x}^r$; $d\vt{x}$ o vetor infinitesimal da mesma fibra agora na configuração deformada, partindo do ponto $\vt{x}$.
+Para que o vetor $d\vt{x}^r$ deforme e se transforme em $d\vt{x}$, deve ocorrer uma transformação que depende de $\vt{x}^r+d\vt{x}^r$, \textit{i.e.}, uma transformação $\vt{u}(\vt{x}^r+d\vt{x}^r)$.
+	
+Algumas relações podem ser estabelecidas a partir da imagem acima, sendo:
+\[\vt{u}(\vt{x}^r)=d\vt{x}^r+\vt{u}(\vt{x}^r+d\vt{x}^r)\]
+	
+E a fibra na configuração deformada:	
+\[d\vt{x}=d\vt{x}^r+\vt{u}(\vt{x}^r+d\vt{x}^r)-\vt{u}(\vt{x}^r)\]
+	
+A equação acima na forma de componentes:
+\[dx^i=dx^{ri}+u^i(x^{r1}+dx^{r1},\;x^{r2}+dx^{r2},\;x^{r3}+dx^{r3})-u^i(x^{r1},\;x^{r2},\;x^{r3})\]
+	
+Lembrando de cálculo com múltiplas variáveis:
+\[u^i(x^{r1}+dx^{r1},\;x^{r2}+dx^{r2},\;x^{r3}+dx^{r3})-u^i(x^{r1},\;x^{r2},\;x^{r3})=\frac{\partial u^i}{\partial x^{r1}}dx^{r1}+\frac{\partial u^i}{\partial x^{r2}}dx^{r2}+\frac{\partial u^i}{\partial x^{r3}}dx^{r3}\]
+	
+Para $i=1,\;2$ e $3$. Essa iteração diz que cada coordenada $i$ depende de acontecimentos nas $3$ dimensões do espaço euclidiano.
+	
+Reescrevendo na forma matricial:
+\[
+	\underbrace{
+	\begin{Bmatrix}
+		dx^1 \\ dx^2 \\ dx^3
+	\end{Bmatrix}
+	}_{\displaystyle d\vt{x}}
+	=
+	\underbrace{
+	\begin{Bmatrix}
+		dx^{r1} \\ dx^{r2} \\ dx^{r3}
+	\end{Bmatrix}
+	}_{\displaystyle d\vt{x}^r}
+	+
+	\underbrace{
+	\begin{bmatrix}
+		\frac{\partial u^1}{\partial x^{r1}} & \frac{\partial u^1}{\partial x^{r2}} & \frac{\partial u^1}{\partial x^{r3}} \\
+		\frac{\partial u^2}{\partial x^{r1}} & \frac{\partial u^2}{\partial x^{r2}} & \frac{\partial u^2}{\partial x^{r3}} \\
+		\frac{\partial u^3}{\partial x^{r1}} & \frac{\partial u^3}{\partial x^{r2}} & \frac{\partial u^3}{\partial x^{r3}}
+	\end{bmatrix}
+	}_{\displaystyle\nabla\vt{u}=\ts{L}}
+	\underbrace{
+	\begin{Bmatrix}
+		dx^{r1} \\ dx^{r2} \\ dx^{r3}
+	\end{Bmatrix}
+	}_{\displaystyle d\vt{x}^r}
+\]
+	
+Onde $\nabla\vt{u}$ é o \textbf{gradiente dos deslocamentos}.
+	
+Logo,
+\[d\vt{x}=d\vt{x}^r+\nabla\vt{u}\;d\vt{x}^r\]
+	
+Colocando $d\vt{x}^r$ em evidência, temos:
+\[d\vt{x}=\underbrace{(\underline{\mathbf{I}}+\nabla\vt{u})}_{\displaystyle \ts{F}}d\vt{x}^r\]
+	
+Onde $\ts{F}$ é o \textbf{gradiente das deformações}.
+	
+Portanto, temos:
+\begin{equation}
+	d\vt{x}=\ts{F}\;d\vt{x}^r
+\end{equation}
+	
+Ou seja, a fibra deformada agora pode ser obtida a partir do gradiente dos deslocamentos ($\nabla\vt{u}$) e também a partir do gradiente das deformações ($\ts{F}$).
+	
+O gradiente das deformações pode ser reescrito como:
+\[
+	\ts{F}=
+	\begin{bmatrix}
+		1+\frac{\partial u^1}{\partial x^{r1}} & \frac{\partial u^1}{\partial x^{r2}} & \frac{\partial u^1}{\partial x^{r3}} \\
+		\frac{\partial u^2}{\partial x^{r1}} & 1+\frac{\partial u^2}{\partial x^{r2}} & \frac{\partial u^2}{\partial x^{r3}} \\
+		\frac{\partial u^3}{\partial x^{r1}} & \frac{\partial u^3}{\partial x^{r2}} & 1+\frac{\partial u^3}{\partial x^{r3}}
+	\end{bmatrix}
+\]
+	
+Ou ainda, usando notação indicial de Einstein:
+\[F_{ij}=\nabla u_{ij}+\delta_{ij}\]
+	
+Onde $\delta_{ij}$ é o delta de Kronecker, \textit{i.e.}: $\delta_{ij}=\begin{cases} 1, & \text{se } i=j \\ 0, & \text{se } i\neq j \end{cases}$
+	
+E em notação indicial, temos:
+\[\nabla u_{ij}=\frac{\partial u^i}{\partial x^{rj}}\]
+	
+Agora, expressemos:
+\[\vt{u}=\vt{x}-\vt{x}^r\implies \vt{x}=\vt{u}+\vt{x}^r\]
+\[x^i=u^i+x^{ri}\]
+	
+Derivando ambos os lados da notação indicial acima em relação a $\vt{x}^r$, temos:
+\[\underbrace{\frac{\partial x^i}{\partial x^{rj}}}_{\displaystyle\ts{F}}=\underbrace{\frac{\partial u^i}{\partial x^{rj}}}_{\displaystyle\nabla u_{ij}}+\underbrace{\frac{\partial x^{ri}}{\partial x^{rj}}}_{\displaystyle\delta_{ij}}\]
+	
+Ou seja, agora o gradiente das deformações está em função da transformação e sua forma matricial é:
+\[
+	\ts{F}=
+	\begin{bmatrix}
+		\frac{\partial x^1}{\partial x^{r1}} & \frac{\partial x^1}{\partial x^{r2}} & \frac{\partial x^1}{\partial x^{r3}} \\
+		\frac{\partial x^2}{\partial x^{r1}} & \frac{\partial x^2}{\partial x^{r2}} & \frac{\partial x^2}{\partial x^{r3}} \\
+		\frac{\partial x^3}{\partial x^{r1}} & \frac{\partial x^3}{\partial x^{r2}} & \frac{\partial x^3}{\partial x^{r3}}
+	\end{bmatrix}	
+\]
+	
+Lembrete sobre operadores lineares:
+	
+$\ts{F}$ e $\nabla\vt{u}$  são operadores lineares de $E\rightarrow E$. Seja $\mathbf{\underline{T}}$ um operador linear:
+\[\mathbf{\underline{T}}(\alpha\vt{x}+\beta\vt{y})=\alpha\mathbf{\underline{T}}\vt{x}+\beta\mathbf{\underline{T}}\vt{y},\;\forall\;\mathbf{\vt{x}}\text{ e }\mathbf{\vt{y}}\in\text{$E$}\]
+	
+//Inserir imagem
+	
+\[
+	\begin{Bmatrix}
+		b_1 \\ b_2 \\ b_3
+	\end{Bmatrix}
+	=
+	\underbrace{
+	\begin{bmatrix}
+		T_{11} & T_{12} & T_{13} \\
+		T_{21} & T_{22} & T_{23} \\
+		T_{31} & T_{32} & T_{33}
+	\end{bmatrix}
+	}_{\displaystyle\mathbf{\underline{T}}}
+	\begin{Bmatrix}
+		a_1 \\ a_2 \\ a_3
+	\end{Bmatrix}
+\]
+	
+Obs: Para o curso, um operador linear tem a mesma função de um tensor (simplificando).

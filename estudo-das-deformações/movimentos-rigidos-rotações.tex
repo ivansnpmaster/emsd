@@ -1,0 +1,120 @@
+//Inserir imagem
+
+Para a figura acima em uma base ortonormal e o eixo de rotação $\utilde{\mathbf{\hat{e}}}=\utilde{\mathbf{\hat{e}_3}}$, $\theta$ é a magnitude de rotação, $\utilde{\theta}=\theta\utilde{\mathbf{\hat{e}}}$ ($\utilde{\theta}$ define totalmente a rotação) e $||\utilde{\mathbf{\hat{e}}}||=1$.
+
+Lembrando do exercício de rotação da primeira aula,
+\[
+    \underbrace{\begin{Bmatrix}
+        x^1 \\ x^2 \\ x^3
+    \end{Bmatrix}}_{\displaystyle\utilde{\mathbf{x}}}
+    =
+    \underbrace{
+    \begin{bmatrix}
+        \cos\varphi & -\sin\varphi & 0 \\
+        \sin\varphi & \cos\varphi & 0 \\
+        0 & 0 & 1
+    \end{bmatrix}}_{\displaystyle\underline{\mathbf{Q}}}
+    \underbrace{
+    \begin{Bmatrix}
+        x^{r1} \\ x^{r2} \\ x^{r3}
+    \end{Bmatrix}}_{\displaystyle\utilde{\mathbf{x}}^r}		
+\]
+
+Onde $\underline{\mathbf{Q}}$ é o operador (tensor) ortogonal.
+
+Pode-se definir um operador ortogonal de forma equivalente por uma das relações abaixo,
+\begin{itemize}
+    \item $||\underline{\mathbf{Q}}\utilde{\mathbf{w}}||=||\utilde{\mathbf{w}}||\;\forall\;\utilde{\mathbf{w}}$ (Não muda o comprimento).
+    \item $\underline{\mathbf{Q}}\underline{\mathbf{Q}}^{\text{T}}=\underline{\mathbf{Q}}^{\text{T}}\underline{\mathbf{Q}}=\underline{\mathbf{I}}\implies\underline{\mathbf{Q}}^{-1}=\underline{\mathbf{Q}}^{\text{T}}$
+    \item A partir de item acima,
+    	\[\det(\underline{\mathbf{Q}}\underline{\mathbf{Q}}^{\text{T}})=\det(\underline{\mathbf{I}})\]
+    	\[\det(\underline{\mathbf{Q}})\det(\underline{\mathbf{Q}}^{\text{T}})=1\]
+    	\[(\det\underline{\mathbf{Q}})^2=1\]
+    	\[\det(\underline{\mathbf{Q}})=\pm1\]
+\end{itemize}
+
+Pode-se demonstrar que para qualquer tensor ortogonal com determinante positivo ($\det(\underline{\mathbf{Q}})=1$), a rotação é descrita através da equação,
+\[\utilde{\mathbf{x}}=\underline{\mathbf{Q}}\utilde{\mathbf{x}}^r\]
+
+\textbf{Exercício} - Capítulo 3/página 144 do livro \textit{The Mechanics of Solids and Structures - Hierarchical Modeling and The Finite Element Process of Solution (Bucalem, Bathe):}
+
+Considere o tensor $\underline{\mathbf{Q}}$ na base ortogonal,
+\[
+    \underline{\mathbf{Q}}
+    =
+    \begin{bmatrix}
+        \frac{4}{9}+\frac{5\sqrt{3}}{18} & \frac{5}{18}+\frac{2\sqrt{3}}{9} & \frac{5}{9}-\frac{\sqrt{3}}{9} \\
+        \frac{11}{18}-\frac{2\sqrt{3}}{9} & \frac{4}{9}+\frac{5\sqrt{3}}{18} & -\frac{1}{9}-\frac{\sqrt{3}}{9} \\
+        -\frac{1}{9}-\frac{\sqrt{3}}{9} & \frac{5}{9}-\frac{\sqrt{3}}{9} & \frac{1}{9}+\frac{4\sqrt{3}}{9}
+    \end{bmatrix}
+\]
+
+\begin{enumerate}
+    \item Verificar se $\underline{\mathbf{Q}}$ é um tensor ortogonal;
+    \item Obter o eixo e magnitude dada por $\underline{\mathbf{Q}}$.
+\end{enumerate}
+
+Solução:
+
+\begin{enumerate}
+    \item Deve-se verificar se $\underline{\mathbf{Q}}\underline{\mathbf{Q}}^{\text{T}}=1$
+    \item Considerando que $\utilde{\mathbf{\hat{e}}}$ é um vetor unitário ($||\utilde{\mathbf{\hat{e}}}||=1$) na direção do eixo de rotação, então:
+    	\[\underline{\mathbf{Q}}\utilde{\mathbf{\hat{e}}}=\utilde{\mathbf{\hat{e}}}\;\text{ (Não muda a magnitude)}\]
+    	\[\underline{\mathbf{Q}}\utilde{\mathbf{\hat{e}}}-\utilde{\mathbf{\hat{e}}}=0\]
+    	\[(\underline{\mathbf{Q}}-\underline{\mathbf{I}})\utilde{\mathbf{\hat{e}}}=0\]
+    
+    	Na forma matricial,
+    	\[
+     	   \begin{bmatrix}
+    	        Q_{11}-1 & Q_{12} & Q_{13} \\
+      	      Q_{21} & Q_{22}-1 & Q_{23} \\
+     	       Q_{31} & Q_{32} & Q_{33}-1
+     	   \end{bmatrix}
+     	   \begin{Bmatrix}
+     	       e_1 \\ e_2 \\ e_3
+     	   \end{Bmatrix}
+     	   =
+     	   \begin{Bmatrix}
+     	       0 \\ 0 \\ 0
+     	   \end{Bmatrix}
+    	\]
+    
+    	Resolvendo o sistema
+    	\[
+    	    \utilde{\mathbf{\hat{e}}}
+    	    =
+    	    \begin{Bmatrix}
+    	        2/3 \\ 2/3 \\ 1/3
+    	    \end{Bmatrix}
+    	\]
+    
+    	Verificando se não houve falha no processo de cálculo,
+    	\[||\utilde{\mathbf{\hat{e}}}||=\sqrt{(2/3)^2+(2/3)^2+(1/3)^2}=1\]
+    
+    	Adotando $\utilde{\mathbf{g}}$ como um vetor unitário ortogonal ao eixo de rotação e escolhendo qualquer um dos vetores da base,
+    	\[
+        	\utilde{\mathbf{g}}
+        	=
+        	\frac{\utilde{\mathbf{\hat{e}}}\times\utilde{\mathbf{\hat{e}_2}}}{||\utilde{\mathbf{\hat{e}}}\times\utilde{\mathbf{\hat{e}_2}}||}
+        	=
+        	\begin{Bmatrix}
+        	    -\sqrt{5}/5 \\ 0 \\ \frac{2\sqrt{5}}{5}
+        	\end{Bmatrix}
+    	\]
+    
+    	Aplicando a rotação em $\utilde{\mathbf{g}}$ para obter um vetor $\utilde{\mathbf{f}}$,
+    	\[
+        	\utilde{\mathbf{f}}
+        	=
+        	\underline{\mathbf{Q}}\utilde{\mathbf{g}}
+        	=
+        	\begin{Bmatrix}
+        	    -\frac{\sqrt{15}}{10}+\frac{2\sqrt{5}}{15} \\ -\frac{5}{6} \\ \frac{\sqrt{15}}{5}+\frac{\sqrt{5}}{15}
+        	\end{Bmatrix}
+    	\]
+    
+    	Encontrando o ângulo de rotação pelo produto escalar entre $\utilde{\mathbf{g}}$ e $\utilde{\mathbf{f}}$,
+    	\[\utilde{\mathbf{g}}\cdot\utilde{\mathbf{f}}=||\utilde{\mathbf{g}}||\;||\utilde{\mathbf{f}}||\cos\theta\]
+    	\[\cos\theta=\frac{\sqrt{3}}{2}\therefore\theta=\text{30\textdegree}\]
+    
+\end{enumerate}

@@ -1,0 +1,52 @@
+//Inserir imagem
+	
+Onde $\hat{\utilde{\mathbf{m}}}^r$ é um versor, $\displaystyle\frac{d\utilde{\mathbf{x}}^r}{||d\utilde{\mathbf{x}}^r||}=1$, $ds^r$ é o comprimento infinitesimal de uma fibra na configuração de referência na direção de $\hat{\utilde{\mathbf{m}}}^r$ e $ds$ é o comprimento dessa mesma fibra na configuração deformada. Os comprimentos são definidos como:
+\[ds^r=||d\utilde{\mathbf{x}}^r||=(d\utilde{\mathbf{x}}^r\cdot d\utilde{\mathbf{x}}^r)^{\frac{1}{2}}\]
+\[ds=||d\utilde{\mathbf{x}}||=(d\utilde{\mathbf{x}}\cdot d\utilde{\mathbf{x}})^{\frac{1}{2}}\]
+	
+Lembrando sobre operadores lineares: Seja $\underline{\mathbf{A}}$ um operador linear ou tensor, temos
+\[\utilde{\mathbf{a}}\cdot\underline{\mathbf{A}}\utilde{\mathbf{b}}=\utilde{\mathbf{b}}\cdot\underline{\mathbf{A}}^{\text{T}}\utilde{\mathbf{a}},\;\forall\;\mathbf{\utilde{\mathbf{a}}}\text{ e }\mathbf{\utilde{\mathbf{b}}}\in\text{$E$}\]
+	
+Quando $\underline{\mathbf{A}}=\underline{\mathbf{A}}^{\text{T}}$, $\underline{\mathbf{A}}$ é simétrico.
+	
+\textbf{Exemplo}: A \textit{interpolação quadrática} ou \textit{alongamento quadrático} é definida como:
+\[\varepsilon_q=\frac{1}{2}\frac{(ds)^2-(ds^r)^2}{(ds^r)^2}\]
+	
+Sabendo que,
+\[ds^2=d\utilde{\mathbf{x}}\cdot d\utilde{\mathbf{x}}=\underbrace{\underline{\mathbf{F}}d\utilde{\mathbf{x}}^r}_{\displaystyle\utilde{\mathbf{v}}}\cdot\underline{\mathbf{F}}d\utilde{\mathbf{x}}^r\]
+\[ds^2=\utilde{\mathbf{v}}\cdot\underline{\mathbf{F}}d\utilde{\mathbf{x}}^r\]
+\[ds^2=d\utilde{\mathbf{x}}^r\cdot\underline{\mathbf{F}}^{\text{T}}\utilde{\mathbf{v}}\]
+\[ds^2=d\utilde{\mathbf{x}}^r\cdot\underline{\mathbf{F}}^{\text{T}}\underline{\mathbf{F}}d\utilde{\mathbf{x}}^r\]
+	
+Logo,
+\[\varepsilon_q=\frac{1}{2}\frac{(d\utilde{\mathbf{x}}^r\cdot\underline{\mathbf{F}}^{\text{T}}\underline{\mathbf{F}}d\utilde{\mathbf{x}}^r)-(d\utilde{\mathbf{x}}^r\cdot d\utilde{\mathbf{x}}^r)}{d\utilde{\mathbf{x}}^r\cdot d\utilde{\mathbf{x}}^r}\]
+	
+Lembrando que,
+\[d\utilde{\mathbf{x}}^r=||d\utilde{\mathbf{x}}^r||\hat{\utilde{\mathbf{m}}}^r=ds^r\hat{\utilde{\mathbf{m}}}^r\]
+	
+Então,
+\[\varepsilon_q=\frac{1}{2}\frac{(ds^r\hat{\utilde{\mathbf{m}}}^r\cdot\underline{\mathbf{F}}^{\text{T}}\underline{\mathbf{F}}d\utilde{\mathbf{x}}^r)-(ds^r\hat{\utilde{\mathbf{m}}}^r\cdot ds^r\hat{\utilde{\mathbf{m}}}^r)}{ds^r\hat{\utilde{\mathbf{m}}}^r\cdot ds^r\hat{\utilde{\mathbf{m}}}^r}\]
+\[\varepsilon_q=\frac{1}{2}\frac{ds^r\hat{\utilde{\mathbf{m}}}^r\cdot(\underline{\mathbf{F}}^{\text{T}}\underline{\mathbf{F}}-\underline{\mathbf{I}})ds^r\hat{\utilde{\mathbf{m}}}^r}{ds^r\hat{\utilde{\mathbf{m}}}^r\cdot ds^r\hat{\utilde{\mathbf{m}}}^r}\]
+\[\varepsilon_q=\frac{1}{2}[\hat{\utilde{\mathbf{m}}}^r\cdot(\underline{\mathbf{F}}^{\text{T}}\underline{\mathbf{F}}-\underline{\mathbf{I}})\hat{\utilde{\mathbf{m}}}^r]\]
+\[\varepsilon_q=\hat{\utilde{\mathbf{m}}}^r\cdot\underbrace{\frac{1}{2}(\underline{\mathbf{F}}^{\text{T}}\underline{\mathbf{F}}-\underline{\mathbf{I}})}_{\displaystyle\underline{\mathbf{E}}}\hat{\utilde{\mathbf{m}}}^r\]
+	
+\[\underline{\mathbf{E}}=\frac{1}{2}(\underline{\mathbf{F}}^{\text{T}}\underline{\mathbf{F}}-\underline{\mathbf{I}})\]
+\[\varepsilon_q(\hat{\utilde{\mathbf{m}}}^r)=\hat{\utilde{\mathbf{m}}}^r\cdot\underline{\mathbf{E}}\hat{\utilde{\mathbf{m}}}^r\]
+	
+Onde $\underline{\mathbf{E}}$ é o Tensor das Deformações de Green-Lagrange e vale para qualquer magnitude de deslocamento. Algumas literaturas chamam de \textit{finite displacement} os deslocamentos de qualquer magnitude.
+	
+Agora na notação de Einstein:
+\[E_{ij}=\frac{1}{2}\left(\frac{\partial x^k}{\partial x^{ri}}\frac{\partial x^k}{\partial x^{rj}}-\delta_{ij}\right)\]
+	
+Expressando os componentes de $\underline{\mathbf{E}}$ a partir do campo de deslocamentos:
+\[\underline{\mathbf{E}}=\frac{1}{2}[(\nabla\utilde{\mathbf{u}}^{\text{T}}+\underline{\mathbf{I}})(\nabla\utilde{\mathbf{u}}+\underline{\mathbf{I}})-\underline{\mathbf{I}}]\]
+\[\underline{\mathbf{E}}=\frac{1}{2}(\nabla\utilde{\mathbf{u}}^{\text{T}}\nabla\utilde{\mathbf{u}}+\nabla\utilde{\mathbf{u}}^{\text{T}}+\nabla\utilde{\mathbf{u}}+\underline{\mathbf{I}}-\underline{\mathbf{I}})\]
+\[\underline{\mathbf{E}}=\frac{1}{2}(\nabla\utilde{\mathbf{u}}+\nabla\utilde{\mathbf{u}}^{\text{T}}+\nabla\utilde{\mathbf{u}}^{\text{T}}\nabla\utilde{\mathbf{u}})\]
+	
+Na notação de Einstein:
+\[E_{ij}=\frac{1}{2}\left(\frac{\partial u^i}{\partial x^{rj}}+\frac{\partial u^j}{\partial x^{ri}}+\underbrace{\frac{\partial u^k}{\partial x^{ri}}\frac{\partial u^k}{\partial x^{rj}}}_{*}\right)\]
+	
+Sendo $*$:
+\[\frac{\partial u^k}{\partial x^{ri}}\frac{\partial u^k}{\partial x^{rj}}=\frac{\partial u^1}{\partial x^{ri}}\frac{\partial u^1}{\partial x^{rj}}+\frac{\partial u^2}{\partial x^{ri}}\frac{\partial u^2}{\partial x^{rj}}+\frac{\partial u^3}{\partial x^{ri}}\frac{\partial u^3}{\partial x^{rj}}\]
+	
+Acima, $E_{ij}$ denota equações de compatibilidade; uma relação deslocamentos-deformações.

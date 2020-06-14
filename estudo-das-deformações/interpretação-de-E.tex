@@ -1,0 +1,120 @@
+Partindo-se de uma base ortonormal ($\utilde{e_1}$, $\utilde{e_2}$, $\utilde{e_3}$), o Tensor das Deformações de Green-Lagrange é definido como,
+\[
+	\underline{\mathbf{E}}
+	=
+	\begin{bmatrix}
+		E_{11} & E_{12} & E_{13} \\
+		E_{21} & E_{22} & E_{23} \\
+		E_{31} & E_{32} & E_{33}
+	\end{bmatrix}
+\]
+
+Lembrando do alongamento quadrático, por exemplo, de uma fibra alinhada na direção de $\utilde{\mathbf{\hat{e}_1}}$,
+\[\varepsilon_q(\utilde{\mathbf{\hat{e}_1}})=\utilde{\mathbf{\hat{e}_1}}\cdot\underline{\mathbf{E}}\utilde{\mathbf{\hat{e}_1}}\]
+\[
+	\varepsilon_q(\utilde{\mathbf{\hat{e}_1}})
+	=
+	\begin{Bmatrix}
+		1 & 0 & 0
+	\end{Bmatrix}
+	\cdot
+	\begin{bmatrix}
+		E_{11} & E_{12} & E_{13} \\
+		E_{21} & E_{22} & E_{23} \\
+		E_{31} & E_{32} & E_{33}
+	\end{bmatrix}
+	\begin{Bmatrix}
+		1 \\ 0 \\ 0
+	\end{Bmatrix}
+\]
+\[
+	\varepsilon_q(\utilde{\mathbf{\hat{e}_1}})
+	=
+	\begin{Bmatrix}
+		1 & 0 & 0
+	\end{Bmatrix}
+	\cdot
+	\begin{Bmatrix}
+		E_{11} \\ E_{22} \\ E_{33}
+	\end{Bmatrix}
+	=
+	E_{11}
+\]
+
+Da mesma forma, uma fibra na direção de $\utilde{\mathbf{\hat{e}_2}}$ ou $\utilde{\mathbf{\hat{e}_3}}$,
+\[\varepsilon_q(\utilde{\mathbf{\hat{e}_2}})=E_{22}\]
+\[\varepsilon_q(\utilde{\mathbf{\hat{e}_3}})=E_{33}\]
+
+Ou seja, a diagonal de $\underline{\mathbf{E}}$ guarda o alongamento quadrático. E quanto à distorção? Escolhendo dois vetores da base ortonormal quaisqueres, por exemplo, $\utilde{\mathbf{\hat{e}_1}}$ e $\utilde{\mathbf{\hat{e}_2}}$ e lembrando da Equação \eqref{eq-distorcao-fibra-2},
+\begin{equation}\label{eq-distorcao-fibra-3}
+    \sin\gamma(\utilde{\mathbf{\hat{e}_1}},\utilde{\mathbf{\hat{e}_2}})=\frac{2(\utilde{\mathbf{\hat{e}_2}}\cdot\underline{\mathbf{E}}\utilde{\mathbf{\hat{e}_1}})}{\displaystyle\sqrt{2(\utilde{\mathbf{\hat{e}_1}}\cdot\underline{\mathbf{E}}\utilde{\mathbf{\hat{e}_1}})+1}\sqrt{2(\utilde{\mathbf{\hat{e}_2}}\cdot\underline{\mathbf{E}}\utilde{\mathbf{\hat{e}_2}})+1}}
+\end{equation}
+
+Desenvolvendo o produto escalar no numerador da expressão acima na equação do alongamento quadrático,
+\[\varepsilon_q=\utilde{\mathbf{\hat{e}_2}}\cdot\underline{\mathbf{E}}\utilde{\mathbf{\hat{e}_1}}\]
+\[
+	\varepsilon_q
+	=
+	\begin{Bmatrix}
+		0 & 1 & 0
+	\end{Bmatrix}
+	\cdot
+	\begin{bmatrix}
+		E_{11} & E_{12} & E_{13} \\
+		E_{21} & E_{22} & E_{23} \\
+		E_{31} & E_{32} & E_{33}
+	\end{bmatrix}
+	\begin{Bmatrix}
+		1 \\ 0 \\ 0
+	\end{Bmatrix}
+\]
+\[
+	\varepsilon_q
+	=
+	\begin{Bmatrix}
+		0 & 1 & 0
+	\end{Bmatrix}
+	\cdot
+	\begin{Bmatrix}
+		E_{11} \\ E_{21} \\ E_{31}
+	\end{Bmatrix}
+	=
+	E_{21}	
+\]
+
+Agora, invertendo os versores escolhidos para a Equação \eqref{eq-distorcao-fibra-2} e como o denominador continuará o mesmo, só o numerador sofrerá alteração. Desenvolvendo-o da mesma forma na equação do alongamento quadrático,
+\[\varepsilon_q=\utilde{\mathbf{\hat{e}_1}}\cdot\underline{\mathbf{E}}\utilde{\mathbf{\hat{e}_2}}\]
+\[
+	\varepsilon_q
+	=
+	\begin{Bmatrix}
+		1 & 0 & 0
+	\end{Bmatrix}
+	\cdot
+	\begin{bmatrix}
+		E_{11} & E_{12} & E_{13} \\
+		E_{21} & E_{22} & E_{23} \\
+		E_{31} & E_{32} & E_{33}
+	\end{bmatrix}
+	\begin{Bmatrix}
+		0 \\ 1 \\ 0
+	\end{Bmatrix}
+\]
+\[
+	\varepsilon_q
+	=
+	\begin{Bmatrix}
+		1 & 0 & 0
+	\end{Bmatrix}
+	\cdot
+	\begin{Bmatrix}
+		E_{12} \\ E_{22} \\ E_{32}
+	\end{Bmatrix}
+	=
+	E_{12}
+\]
+
+Ou seja, como a distorção entre esses versores deve ser igual, apenas invertendo os versores utilizados pode-se chegar a conclusão de que $E_{21}=E_{12}$. Isso significa que $\underline{\mathbf{E}}$ é simétrico.
+
+Pode-se reescrever a Equação \eqref{eq-distorcao-fibra-3} como,
+\[\sin\gamma(\utilde{\mathbf{\hat{e}_1}},\utilde{\mathbf{\hat{e}_2}})=\frac{2E_{21}}{\displaystyle\sqrt{2E_{11}+1}\sqrt{2E_{22}+1}}\]

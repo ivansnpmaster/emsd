@@ -1,0 +1,36 @@
+O alongamento quadrático,
+\[\lambda=\sqrt{2\varepsilon_q+1}\]
+
+Elevando ambos os lados ao quadrado,
+\[\lambda^2=2\varepsilon_q+1=2(\hat{\utilde{\mathbf{m}}}^r\cdot\underline{\mathbf{E}}\hat{\utilde{\mathbf{m}}}^r)+1\]
+
+Como $\underline{\mathbf{C}}=\underline{\mathbf{F}}^{\text{T}}\underline{\mathbf{F}}$, $\underline{\mathbf{E}}$ pode ser reescrito como,
+\begin{equation}\label{eq-green-lagrange-em-funcao-de-cauchy-green}
+    \underline{\mathbf{E}}=\frac{1}{2}(\underline{\mathbf{C}}-\underline{\mathbf{I}})
+\end{equation}
+
+Pode-se reescrever $\lambda^2$ como,
+\[\lambda^2=2\left\{\hat{\utilde{\mathbf{m}}}^r\cdot\left[\frac{1}{2}(\underline{\mathbf{C}}-\underline{\mathbf{I}})\right]\hat{\utilde{\mathbf{m}}}^r\right\}+1\]
+\[\lambda^2=\hat{\utilde{\mathbf{m}}}^r\cdot\underline{\mathbf{C}}\hat{\utilde{\mathbf{m}}}^r-\hat{\utilde{\mathbf{m}}}^r\cdot\underline{\mathbf{I}}\hat{\utilde{\mathbf{m}}}^r+1\]
+\[\lambda^2=\hat{\utilde{\mathbf{m}}}^r\cdot\underline{\mathbf{C}}\hat{\utilde{\mathbf{m}}}^r-\underbrace{\hat{\utilde{\mathbf{m}}}^r\cdot\hat{\utilde{\mathbf{m}}}^r}_{\displaystyle1}+1\]
+\[\lambda^2=\hat{\utilde{\mathbf{m}}}^r\cdot\underline{\mathbf{C}}\hat{\utilde{\mathbf{m}}}^r\]
+
+Logo,
+\begin{equation}
+    \lambda(\hat{\utilde{\mathbf{m}}}^r)=\sqrt{\hat{\utilde{\mathbf{m}}}^r\cdot\underline{\mathbf{C}}\hat{\utilde{\mathbf{m}}}^r}
+\end{equation}
+
+Para o alongamento linear,
+\[\varepsilon_l(\hat{\utilde{\mathbf{m}}}^r)=\lambda-1\]
+\begin{equation}\label{eq-alongamento-linear-1}
+    \varepsilon_l(\hat{\utilde{\mathbf{m}}}^r)=\sqrt{\hat{\utilde{\mathbf{m}}}^r\cdot\underline{\mathbf{C}}\hat{\utilde{\mathbf{m}}}^r}-1
+\end{equation}
+
+Para a distorção, a partir da Equação \eqref{eq-distorcao-fibra-1},
+\[\sin\gamma=\frac{\hat{\utilde{\mathbf{b}}}^r\cdot\underline{\mathbf{F}}^{\text{T}}\underline{\mathbf{F}}\hat{\utilde{\mathbf{a}}}^r}{\sqrt{\hat{\utilde{\mathbf{a}}}^r\cdot\underline{\mathbf{F}}^{\text{T}}\underline{\mathbf{F}}\hat{\utilde{\mathbf{a}}}^r}\sqrt{\hat{\utilde{\mathbf{b}}}^r\cdot\underline{\mathbf{F}}^{\text{T}}\underline{\mathbf{F}}\hat{\utilde{\mathbf{b}}}^r}}\]
+
+Como $\underline{\mathbf{F}}^{\text{T}}\underline{\mathbf{F}}=\underline{\mathbf{C}}$,
+\[\sin\gamma=\frac{\hat{\utilde{\mathbf{b}}}^r\cdot\underline{\mathbf{C}}\hat{\utilde{\mathbf{a}}}^r}{\displaystyle\sqrt{\hat{\utilde{\mathbf{a}}}^r\cdot\underline{\mathbf{C}}\hat{\utilde{\mathbf{a}}}^r}\sqrt{\hat{\utilde{\mathbf{b}}}^r\cdot\underline{\mathbf{C}}\hat{\utilde{\mathbf{b}}}^r}}\]
+\[\sin\gamma=\frac{\hat{\utilde{\mathbf{b}}}^r\cdot\underline{\mathbf{C}}\hat{\utilde{\mathbf{a}}}^r}{\lambda(\hat{\utilde{\mathbf{a}}}^r)\lambda(\hat{\utilde{\mathbf{b}}}^r)}\]
+
+Ou seja, pode-se concluir que $\underline{\mathbf{C}}$ é simétrico.

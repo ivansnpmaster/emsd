@@ -1,0 +1,55 @@
+//Inserir imagem
+
+\begin{itemize}
+    \item $d\utilde{\mathbf{a}}^r$ e $d\utilde{\mathbf{b}}^r$ são inicialmente ortogonais;
+    \item $\underline{\mathbf{F}}d\utilde{\mathbf{a}}^r$ tem a mesma direção de $d\utilde{\mathbf{a}}$ (hipótese);
+    \item $\hat{\utilde{\mathbf{a}}}$ e $\hat{\utilde{\mathbf{b}}}$ são versores.
+\end{itemize}
+
+Lembrando que,
+\[d\utilde{\mathbf{a}}=\underline{\mathbf{F}}d\utilde{\mathbf{a}}^r\text{ e }d\utilde{\mathbf{b}}=\underline{\mathbf{F}}d\utilde{\mathbf{b}}^r\]
+
+A fim de encontrar novas relações, podemos definir o produto escalar,
+\[d\utilde{\mathbf{a}}\cdot d\utilde{\mathbf{b}}=\underline{\mathbf{F}}d\utilde{\mathbf{a}}^r\cdot\underline{\mathbf{F}}d\utilde{\mathbf{b}}^r\]
+\[d\utilde{\mathbf{a}}\cdot d\utilde{\mathbf{b}}=||\underline{\mathbf{F}}d\utilde{\mathbf{a}}^r||\;|| \underline{\mathbf{F}}d\utilde{\mathbf{b}}^r ||\cos\theta\]
+
+Logo,
+\begin{equation}\label{eq-variacao-angulo-fibras}
+    \cos\theta=\sin\gamma=\frac{\underline{\mathbf{F}}d\utilde{\mathbf{a}}^r\cdot\underline{\mathbf{F}}d\utilde{\mathbf{b}}^r}{||\underline{\mathbf{F}}d\utilde{\mathbf{a}}^r||\;|| \underline{\mathbf{F}}d\utilde{\mathbf{b}}^r ||}
+\end{equation}
+
+E,
+\[d\utilde{\mathbf{a}}^r=d\mathbf{a}^r\hat{\utilde{\mathbf{a}}}^r\]
+\[d\utilde{\mathbf{b}}^r=d\mathbf{b}^r\hat{\utilde{\mathbf{b}}}^r\]
+\[||\underline{\mathbf{F}}d\utilde{\mathbf{a}}^r||=\sqrt{\underline{\mathbf{F}}d\utilde{\mathbf{a}}^r\cdot\underline{\mathbf{F}}d\utilde{\mathbf{a}}^r}\]
+\[||\underline{\mathbf{F}}d\utilde{\mathbf{b}}^r||=\sqrt{\underline{\mathbf{F}}d\utilde{\mathbf{b}}^r\cdot\underline{\mathbf{F}}d\utilde{\mathbf{b}}^r}\]
+
+Substituindo as 4 relações acima na Equação \eqref{eq-variacao-angulo-fibras},
+\[\sin\gamma=\frac{d\utilde{\mathbf{b}}^r\cdot\underline{\mathbf{F}}^{\text{T}}\underline{\mathbf{F}}d\utilde{\mathbf{a}}^r}{\sqrt{d\utilde{\mathbf{a}}^r\cdot\underline{\mathbf{F}}^{\text{T}}\underline{\mathbf{F}}d\utilde{\mathbf{a}}^r}\sqrt{d\utilde{\mathbf{b}}^r\cdot\underline{\mathbf{F}}^{\text{T}}\underline{\mathbf{F}}d\utilde{\mathbf{b}}^r}}\]
+
+\[\sin\gamma=\frac{(d\mathbf{b}^r\hat{\utilde{\mathbf{b}}}^r)\cdot[\underline{\mathbf{F}}^{\text{T}}\underline{\mathbf{F}}(d\mathbf{a}^r\hat{\utilde{\mathbf{a}}}^r)]}{\sqrt{(d\mathbf{a}^r\hat{\utilde{\mathbf{a}}}^r)\cdot[\underline{\mathbf{F}}^{\text{T}}\underline{\mathbf{F}}(d\mathbf{a}^r\hat{\utilde{\mathbf{a}}}^r)]}\sqrt{(d\mathbf{b}^r\hat{\utilde{\mathbf{b}}}^r)\cdot[\underline{\mathbf{F}}^{\text{T}}\underline{\mathbf{F}}(d\mathbf{b}^r\hat{\utilde{\mathbf{b}}}^r)]}}\]
+
+\[\sin\gamma=\frac{(d\mathbf{b}^rd\mathbf{a}^r)[\hat{\utilde{\mathbf{b}}}^r\cdot\underline{\mathbf{F}}^{\text{T}}\underline{\mathbf{F}}\hat{\utilde{\mathbf{a}}}^r]}{(d\mathbf{b}^rd\mathbf{a}^r)\sqrt{\hat{\utilde{\mathbf{a}}}^r\cdot\underline{\mathbf{F}}^{\text{T}}\underline{\mathbf{F}}\hat{\utilde{\mathbf{a}}}^r}\sqrt{\hat{\utilde{\mathbf{b}}}^r\cdot\underline{\mathbf{F}}^{\text{T}}\underline{\mathbf{F}}\hat{\utilde{\mathbf{b}}}^r}}\]
+
+\begin{equation}\label{eq-distorcao-fibra-1}
+    \sin\gamma=\frac{\hat{\utilde{\mathbf{b}}}^r\cdot\underline{\mathbf{F}}^{\text{T}}\underline{\mathbf{F}}\hat{\utilde{\mathbf{a}}}^r}{\sqrt{\hat{\utilde{\mathbf{a}}}^r\cdot\underline{\mathbf{F}}^{\text{T}}\underline{\mathbf{F}}\hat{\utilde{\mathbf{a}}}^r}\sqrt{\hat{\utilde{\mathbf{b}}}^r\cdot\underline{\mathbf{F}}^{\text{T}}\underline{\mathbf{F}}\hat{\utilde{\mathbf{b}}}^r}}
+\end{equation}		
+
+Lembrando que,
+\[\underline{\mathbf{E}}=\frac{1}{2}(\underline{\mathbf{F}}^{\text{T}}\underline{\mathbf{F}}-\underline{\mathbf{I}})\]
+\[\underline{\mathbf{F}}^{\text{T}}\underline{\mathbf{F}}=2\underline{\mathbf{E}}+\underline{\mathbf{I}}\]
+
+Substituindo a expressão acima na Equação \eqref{eq-distorcao-fibra-1},
+\[\sin\gamma=\frac{\hat{\utilde{\mathbf{b}}}^r\cdot(2\underline{\mathbf{E}}+\underline{\mathbf{I}})\hat{\utilde{\mathbf{a}}}^r}{\sqrt{\hat{\utilde{\mathbf{a}}}^r\cdot(2\underline{\mathbf{E}}+\underline{\mathbf{I}})\hat{\utilde{\mathbf{a}}}^r}\sqrt{\hat{\utilde{\mathbf{b}}}^r\cdot(2\underline{\mathbf{E}}+\underline{\mathbf{I}})\hat{\utilde{\mathbf{b}}}^r}}\]
+\[(2\underline{\mathbf{E}}+\underline{\mathbf{I}})\hat{\utilde{\mathbf{a}}}^r=2\underline{\mathbf{E}}\hat{\utilde{\mathbf{a}}}^r+\underline{\mathbf{I}}\hat{\utilde{\mathbf{a}}}^r=2\underline{\mathbf{E}}\hat{\utilde{\mathbf{a}}}^r+\hat{\utilde{\mathbf{a}}}^r\]
+
+\[\sin\gamma=\frac{\hat{\utilde{\mathbf{b}}}^r\cdot(2\underline{\mathbf{E}}\hat{\utilde{\mathbf{a}}}^r+\hat{\utilde{\mathbf{a}}}^r)}{\sqrt{\hat{\utilde{\mathbf{a}}}^r\cdot(2\underline{\mathbf{E}}\hat{\utilde{\mathbf{a}}}^r+\hat{\utilde{\mathbf{a}}}^r)}\sqrt{\hat{\utilde{\mathbf{b}}}^r\cdot(2\underline{\mathbf{E}}\hat{\utilde{\mathbf{b}}}^r+\hat{\utilde{\mathbf{b}}}^r)}}\]
+
+\[\sin\gamma=\frac{\hat{\utilde{\mathbf{b}}}^r\cdot2\underline{\mathbf{E}}\hat{\utilde{\mathbf{a}}}^r+\hat{\utilde{\mathbf{b}}}^r\cdot\hat{\utilde{\mathbf{a}}}^r}{\displaystyle\sqrt{\hat{\utilde{\mathbf{a}}}^r\cdot2\underline{\mathbf{E}}\hat{\utilde{\mathbf{a}}}^r+\hat{\utilde{\mathbf{a}}}^r\cdot\hat{\utilde{\mathbf{a}}}^r}\sqrt{\hat{\utilde{\mathbf{b}}}^r\cdot2\underline{\mathbf{E}}\hat{\utilde{\mathbf{b}}}^r+\hat{\utilde{\mathbf{b}}}^r\cdot\hat{\utilde{\mathbf{b}}}^r}}\]
+
+Por fim,
+\begin{equation}\label{eq-distorcao-fibra-2}
+    \sin\gamma(\hat{\utilde{\mathbf{a}}}^r,\hat{\utilde{\mathbf{b}}}^r)=\frac{2(\hat{\utilde{\mathbf{b}}}^r\cdot\underline{\mathbf{E}}\hat{\utilde{\mathbf{a}}}^r)}{\displaystyle\sqrt{2(\hat{\utilde{\mathbf{a}}}^r\cdot\underline{\mathbf{E}}\hat{\utilde{\mathbf{a}}}^r)+1}\sqrt{2(\hat{\utilde{\mathbf{b}}}^r\cdot\underline{\mathbf{E}}\hat{\utilde{\mathbf{b}}}^r)+1}}
+\end{equation}
+
+Onde $\gamma$ é a distorção, \textit{i.e.}, a variação de ângulo entre duas fibras inicialmente ortogonais.

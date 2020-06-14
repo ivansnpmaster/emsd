@@ -1,0 +1,105 @@
+\begin{itemize}
+	\item Configuração do sólido: posição ocupada pelos pontos em um determinado instante $t$;
+	\item Descrever a configuração deformada ($V$) a partir de uma configuração de referência ($V^r$);
+	\item \sloppy Considerando um conjunto de pontos da Geometria Euclidiana ($E$), e seja, $(\vt{e}_1,\;\vt{e}_2,\;\vt{e}_3)$ uma base do espaço vetorial da geometria clássica.
+\end{itemize}
+	
+Podemos definir $(0,\;\vt{e}_1,\;\vt{e}_2,\;\vt{e}_3)$ como um sistema de referência:
+
+\begin{figure}[H]
+	\centering
+	\caption{Campo de deslocamentos.}
+	\input{estudo-das-deformações/figuras/campo-de-deslocamentos.tex}
+\end{figure}
+	
+Os vetores dos pontos de referência ($\vt{x}^r$) e na configuração deformada ($\vt{x}$) em relação aos versores da base podem ser expressos na notação de Einstein:
+
+\[\vt{x}^r=\vt{x}^r-\vt{0}=\sum_{i=1}^3x^{ri}e_i=x^{r1}\vt{e}_1+x^{r2}\vt{e}_2+x^{r3}\vt{e}_3\]
+\[\vt{x}=\vt{x}-\vt{0}=\sum_{i=1}^3x^ie_i=x^1\vt{e}_1+x^2\vt{e}_2+x^3\vt{e}_3\]
+
+Seja $f$ uma função que associa a posição de cada ponto na configuração $V^r$ a sua posição na configuração $V$. Tal aplicação é uma transformação de $V^r$ em $V$.
+	
+\[x^1=\hat{f}_1(x^{r1},\;x^{r2},\;x^{r3})\]
+\[x^2=\hat{f}_2(x^{r1},\;x^{r2},\;x^{r3})\]
+\[x^3=\hat{f}_3(x^{r1},\;x^{r2},\;x^{r3})\]
+
+Aqui, o circunflexo denota \textit{em função de}, \textit{i.e.}, a coordenada $i$ da posição deformada está em função das coordenadas da posição de referência.
+	
+Exemplo: Considere um sólido cuja seção no plano $\vt{e}_1$, $\vt{e}_2$ é dado por:
+	
+//Inserir imagem
+	
+Caracterize os seguintes campos de deslocamento:
+	
+\begin{enumerate}[a)]
+	\item Translação de corpo rígido de intensidade $\Delta$ na direção de $\vt{e}_1$;
+	\item Rotação de corpo rígido em torno de $\vt{e}_3$ de intensidade $\varphi$.
+\end{enumerate}
+	
+Resolução:
+	
+\begin{enumerate}[a)]
+	\item
+		\[
+		\vt{u}=
+			\begin{Bmatrix}
+			u_1 \\ u_2 \\ u_3
+			\end{Bmatrix}
+			=
+			\begin{Bmatrix}
+				\Delta \\ 0 \\ 0
+			\end{Bmatrix}
+		\]
+		\[\vt{u}=\vt{x}-\vt{x}^r
+		\implies
+		\vt{x}=
+		\begin{cases} x^1=x^{r1}+u_1=x^{r1}+\Delta \\ x^2=x^{r2}+u_2=x^{r2} \\ x^3=x^{r3}+u_3=x^{r3}
+		\end{cases}
+		\]
+	\item
+		//Inserir imagem
+			
+		A configuração de referência:
+		\[x^{r1}=r\cdot \cos\theta\]
+		\[x^{r2}=r\cdot\sin\theta\]
+		\[x^{r3}=0\;\text{(ou }x^{r3}\text{ para deixar genérico})\]
+			
+		A configuração deformada (a partir da imagem):
+			
+		\[u^1=r\cdot\cos(\varphi+\theta)-r\cdot\cos\theta\]
+		\[u^1=r\cdot\cos\varphi\cdot\cos\theta-r\cdot\sin\varphi\cdot\sin\theta-r\cdot\cos\theta\]
+			
+		\[u^2=r\cdot\sin(\varphi+\theta)-r\cdot\sin\theta\]
+		\[u^2=r\cdot\sin\varphi\cdot\cos\theta+r\cdot\sin\theta\cdot\cos\varphi-r\cdot\sin\theta\]
+			
+		Substituindo as coordenadas de referência nas coordenadas deformadas:
+
+		\[u^1=x^{r1}\cdot\cos\varphi-x^{r2}\cdot\sin\varphi-x^{r1}\]
+		\[u^2=x^{r1}\cdot\sin\varphi+x^{r2}\cdot\cos\varphi-x^{r2}\]
+		\[u^3=0\]
+			
+		Como sabemos que $\vt{x}=\vt{x}^r+\utilde{\mathbf{u}}$, temos:
+			
+		\[
+			\begin{cases}
+				x^1=x^{r1}\cdot\cos\varphi-x^{r2}\cdot\sin\varphi \\ x^2=x^{r1}\cdot\sin\varphi+x^{r2}\cdot\cos\varphi \\ x^3=x^{r3}
+			\end{cases}
+		\]
+			
+		Podemos escrever também na forma matricial:
+			
+		\[
+			\begin{Bmatrix}
+				x^1 \\ x^2 \\ x^3
+			\end{Bmatrix}
+			=
+			\begin{bmatrix}	
+				\cos\varphi & -\sin\varphi & 0 \\
+				\sin\varphi & \cos\varphi & 0 \\
+				0 & 0 & 1
+			\end{bmatrix}
+			\begin{Bmatrix}
+				x^{r1} \\ x^{r2} \\ x^{r3}
+			\end{Bmatrix}							
+		\]
+\end{enumerate}
